@@ -1,0 +1,76 @@
+{% set col_mode = true %}
+
+{% set poster = [
+    {
+        main: true,
+        image: 'img/article.jpg',
+        date: 'Sep 21',
+        title: 'Meet Vivian Xu: SwissBorg’s New Quantitative Research Analyst',
+        text: 'Vivian Xu is so young that it feels odd to ask her about her biography, it has hardly begun!'
+    }
+] %}
+
+{% set title = 'Blog' %}
+{% set title_lg = true %}
+{% set link = {
+    url: '',
+    text: 'learn more'
+} %}
+
+{% set links = [
+    {
+        small: true,
+        date: 'Sep 21',
+        title: 'Meet Carlos Cabrera: SwissBorg’s Business Developer in Toronto'
+    },
+    {
+        small: true,
+        date: 'Sep 21',
+        title: 'SwissBorg Partners with Japan’s Ginco'
+    },
+    {
+        small: true,
+        date: 'Sep 21',
+        title: 'Swarm Intelligence in action — SwissBorg’s Community Committee'
+    },
+    {
+        small: true,
+        date: 'Sep 21',
+        title: 'SwissBorg Crypto Indices Are Live!'
+    }
+] %}
+
+{% set linkboxes = [
+    {
+        title: 'Press',
+        text: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.',
+        link_text: 'learn more',
+        link_url: ''
+    },
+    {
+        title: 'Knowledge centre',
+        text: 'Learn more about SwissBorg, solutions and products. Explore how different industry participants can integrate with SwissBorg to bypass structural inefficiencies.',
+        link_text: 'learn more',
+        link_url: ''
+    }
+] %}
+
+<!-- begin section -->
+<section class="section resources">
+    <div class="l">
+        <div class="resources__in js-section-resources">
+            <h2 class="resources__title title js-reveal">Resources</h2>
+            <div class="resources__articles js-reveal">
+                {% include "components/_article-preview.html" %}
+            </div>
+            <div class="resources__linkboxes">
+                {% for i in linkboxes %}
+                <div class="l-col js-reveal">
+                    {% include "components/_linkbox.html" %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->

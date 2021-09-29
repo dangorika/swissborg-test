@@ -1,0 +1,9 @@
+<div class="p-box">
+    <h3 class="p-box__title title">{{ item.title }}</h3>
+    <p class="p-box__text">{{ item.text }}</p>
+    {% if item.link %}
+    <div class="p-box__link">
+        <a href="#" class="link link_next">{{ item.link }}</a>
+    </div>
+    {% endif %}
+</div>

@@ -1,0 +1,117 @@
+<div class="bit-main-data">
+    <div id="smoothStateId" class="bit-data-articles">
+        <div class="bit-data-article">
+            <div class="bit-data-article__header">
+                <div class="bit-data-article__header-items">
+                    <div class="bit-data-article__header-item active">SwissBorg Indices</div>
+                    <div class="details">
+                      <button class="detailsBtn"> <i class="fas fa-info-circle"></i>
+                          Detailed Metrics</button>
+                    </div>
+                </div>
+
+                <div id="SB-last-updated-at" class="bit-lastday"><span class="bit-lastday__text-static"> Last Updated: 5 minutes ago</span></div>
+           </div>
+
+
+            <div class="bit-data__tabs">
+                <div class="bit-data__tab active bit-data__daily">
+                    <div id="portfolioPieChart" class="bit-daily__chart" data-highcharts-chart="0">
+
+                    </div>
+                    <div class="bit-daily__table">
+                        <div class="bit-daily-table__header-row">
+                            <div class="bit-daily-table__header-cell">
+                                <span class="bit-daily-table__header-cell-text">Index</span>
+                            </div>
+                            <div class="bit-daily-table__header-cell">
+                                <span class="bit-daily-table__header-cell-text">Price (US$)</span>
+                            </div>
+                            <div class="bit-daily-table__header-cell">
+                                <span class="bit-daily-table__header-cell-text"> 24h</span>
+                            </div>
+                            <div class="bit-daily-table__header-cell bit-mobile-hide">
+                                <span class="bit-daily-table__header-cell-text"> 1year </span>
+                            </div>
+                            <div class="bit-daily-table__header-cell">
+                                <span class="bit-daily-table__header-cell-text"> Total Return (vs BTC) </span>
+                            </div>
+                        </div>
+                        <div id="SB-indices-list" class="sb-daily-table__content">
+
+                        </div>
+                        <div id="SB-bucket-description" class="SB-bucket-description">
+
+                        </div>
+                    </div>
+                    <div class="modals-container"></div>
+                </div>
+
+
+                <div class="SB-detailed-metrics-container">
+                    <div class="SB-detailed-metrics-table">
+                        <div class="bit-daily-table__header-row">
+                            <div class="bit-daily-table__header-cell">
+                                <span class="bit-daily-table__header-cell-text">Index</span>
+                            </div>
+                            <div class="bit-daily-table__header-cell bit-mobile-hide">
+                                <span class="bit-daily-table__header-cell-text ">Start Date</span>
+                            </div>
+                            <div class="bit-daily-table__header-cell">
+                                <span class="bit-daily-table__header-cell-text"> Annual Return (Compounded) </span>
+                            </div>
+                            <div class="bit-daily-table__header-cell bit-mobile-hide">
+                                <span class="bit-daily-table__header-cell-text"> Annual Outperformance (vs BTC) </span>
+                            </div>
+                            <div class="bit-daily-table__header-cell">
+                                <span class="bit-daily-table__header-cell-text"> Annualized Volatility </span>
+                            </div>
+                            <div class="bit-daily-table__header-cell">
+                                <span class="bit-daily-table__header-cell-text"> Sharpe Ratio </span>
+                            </div>
+                            <div class="bit-daily-table__header-cell bit-mobile-hide">
+                                <span class="bit-daily-table__header-cell-text "> Sortino Ratio </span>
+                            </div>
+                            <div class="bit-daily-table__header-cell bit-mobile-hide">
+                                <span class="bit-daily-table__header-cell-text "> Maximum Drawdown </span>
+                            </div>
+                        </div>
+                        <div id="SB-indices-detailed-stats" class="sb-daily-table__content">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="SB-daily-data-details">
+                    hello
+                </div>
+            </div>
+        </div>
+        <div class="bit-data-article bit-data-article__second">
+            <div class="bit-second-article__header">
+                <div class="bit-second-article__header-items">
+                    <div class="bit-second-article__header-item active">Relative Performance</div>
+                </div>
+            </div>
+            <div class="bit-second-article__tabs">
+                <div class="bit-second-article__tab bit-data__history active">
+                    <div class="bit-second-article__header-description js-graph-data-switch">
+                    </div>
+                    <div class="sb-base-comparison-choose">
+                        Base Token<select id="sb-base-switch">
+                            <option>BTC</option>
+                            <option>ETH</option>
+                            <option>XRP</option>
+                            <option>LTC</option>
+                        </select>
+                    </div>
+                    <div class="bit-data-graph" id="container" data-highcharts-chart="1">
+
+                    </div>
+                </div>
+                <div class="bit-second-article__tab bit-data__performance">
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>

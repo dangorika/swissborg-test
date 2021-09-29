@@ -1,0 +1,77 @@
+---
+title: Swissborg Solutions
+header_dark: true
+
+hero: [
+    {
+        title: 'Swissborg Solutions',
+        titleWhite: true
+    }
+]
+
+infoboxes: {
+    list: [
+        {
+            img: 'img/graph.svg',
+            descr: 'Allowing for the fact that the majority of the blockchain projects are highly conceptual, metrics are lacking to accurately calculate.'
+        },
+        {
+            img: 'img/folder.svg',
+            descr: 'Traders, fund managers, algo-traders, and financial advisors are all full time jobs. These fields of expertise require many years.'
+        },
+        {
+            img: 'img/time.svg',
+            descr: 'Last but definitely not least, contrary to the NYSE or traditional stock markets where we have fixed opening hours, the cryptocurrency.'
+        }
+    ]
+}
+
+preview_boxes: [
+    {
+        title: 'Milti-Strategy Hedge Fund',
+        text: 'A Hedge Fund architecture offers a more robust and dynamic leeway of management while keeping our constant rigorous and transparent philosophy.',
+        link: 'learn more'
+    },
+    {
+        title: 'Blockchain Unchained',
+        text: 'The Blockchain Unchained conference, powered by SwissBorg held in Geneva on September 12th, was one of those action-packed events that engage the mind and lift the spirit.',
+        link: 'learn more'
+    },
+    {
+        title: 'Cripto Indexes',
+        text: 'SwissBorg provides investors with a transparent, diversified and unbiased source of performance through indexed and advanced investment strategies.',
+        link: 'learn more'
+    },
+    {
+        title: 'Smart Wallet',
+        text: 'There are several types of wallets that provide different ways to store and access your digital currency. Wallets can be broken down into three distinct categories.',
+        link: 'learn more'
+    },
+    {
+        title: 'ISO Platform',
+        text: 'A Hedge Fund architecture offers a more robust and dynamic leeway of management while keeping our constant rigorous and transparent philosophy.',
+        link: 'learn more'
+    }
+]
+
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    {% include "partials/_header.html" %}
+
+    <main class="main page-solutions">
+
+        {% for item in hero %}
+            {% include "partials/_page-hero.html" %}
+        {% endfor %}
+
+        {% include "partials/_section-infoboxes.html" %}
+        {% include "partials/_section-preview-boxes.html" %}
+
+    </main>
+
+    {% include "partials/_footer.html" %}
+
+{% endblock %}

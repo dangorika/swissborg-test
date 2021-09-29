@@ -1,0 +1,260 @@
+{% set sections = [
+    {
+        title: 'Our team',
+        link: true,
+        row_visible: 4,
+        team: [
+            {
+                img: 'img/img1.jpg',
+                name: 'Ken Yagami',
+                position: 'Head of Japan',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img2.jpg',
+                name: 'Anthony Lesoismier',
+                position: 'CSO - Co-Founder',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img3.jpg',
+                name: 'Christophe Diserens',
+                position: 'CBDO',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img4.jpg',
+                name: 'Marco Guerreiro',
+                position: 'Chief Research Officer',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img5.jpg',
+                name: 'Marco Guerreiro',
+                position: 'Chief Research Officer',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img1.jpg',
+                name: 'Ken Yagami',
+                position: 'Head of Japan',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img2.jpg',
+                name: 'Anthony Lesoismier',
+                position: 'CSO - Co-Founder',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img3.jpg',
+                name: 'Christophe Diserens',
+                position: 'CBDO',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img4.jpg',
+                name: 'Marco Guerreiro',
+                position: 'Chief Research Officer',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img5.jpg',
+                name: 'Marco Guerreiro',
+                position: 'Chief Research Officer',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img1.jpg',
+                name: 'Ken Yagami',
+                position: 'Head of Japan',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img2.jpg',
+                name: 'Anthony Lesoismier',
+                position: 'CSO - Co-Founder',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img3.jpg',
+                name: 'Christophe Diserens',
+                position: 'CBDO',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img4.jpg',
+                name: 'Marco Guerreiro',
+                position: 'Chief Research Officer',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img5.jpg',
+                name: 'Marco Guerreiro',
+                position: 'Chief Research Officer',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img1.jpg',
+                name: 'Ken Yagami',
+                position: 'Head of Japan',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img2.jpg',
+                name: 'Anthony Lesoismier',
+                position: 'CSO - Co-Founder',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img3.jpg',
+                name: 'Christophe Diserens',
+                position: 'CBDO',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img4.jpg',
+                name: 'Marco Guerreiro',
+                position: 'Chief Research Officer',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img5.jpg',
+                name: 'Marco Guerreiro',
+                position: 'Chief Research Officer',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img1.jpg',
+                name: 'Ken Yagami',
+                position: 'Head of Japan',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img2.jpg',
+                name: 'Anthony Lesoismier',
+                position: 'CSO - Co-Founder',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img3.jpg',
+                name: 'Christophe Diserens',
+                position: 'CBDO',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img4.jpg',
+                name: 'Marco Guerreiro',
+                position: 'Chief Research Officer',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img5.jpg',
+                name: 'Marco Guerreiro',
+                position: 'Chief Research Officer',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img1.jpg',
+                name: 'Ken Yagami',
+                position: 'Head of Japan',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img2.jpg',
+                name: 'Anthony Lesoismier',
+                position: 'CSO - Co-Founder',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img3.jpg',
+                name: 'Christophe Diserens',
+                position: 'CBDO',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img4.jpg',
+                name: 'Marco Guerreiro',
+                position: 'Chief Research Officer',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            }
+        ]
+    },
+    {
+        title: 'Advisors',
+        row_visible: 2,
+        team: [
+            {
+                img: 'img/img1.jpg',
+                name: 'Ken Yagami',
+                position: 'Head of Japan',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img2.jpg',
+                name: 'Anthony Lesoismier',
+                position: 'CSO - Co-Founder',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img3.jpg',
+                name: 'Christophe Diserens',
+                position: 'CBDO',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img4.jpg',
+                name: 'Marco Guerreiro',
+                position: 'Chief Research Officer',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img5.jpg',
+                name: 'Marco Guerreiro',
+                position: 'Chief Research Officer',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            },
+            {
+                img: 'img/img1.jpg',
+                name: 'Ken Yagami',
+                position: 'Head of Japan',
+                links: ['Linkedin'],
+                hover: 'Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document.'
+            }
+        ]
+    }
+] %}

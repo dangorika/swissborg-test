@@ -1,0 +1,40 @@
+---
+title: Team
+header_dark: true
+
+hero: [
+    {
+        title: 'Meet the SwissBorg Team',
+        titleWhite: true,
+        text: '<p>SwissBorg is a community-driven fintech ecosystem that enables<br />and self-governed wealth managment solutions accessible to everyone.</p>'
+    }
+]
+
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    {% include "partials/_header.html" %}
+
+    <main class="main team-wrap">
+
+        {% for item in hero %}
+            {% include "partials/_page-hero.html" %}
+        {% endfor %}
+
+        {% include "partials/_section-values.html" %}
+
+        {% import "data/team.html" as team %}
+
+        {% for item in team.sections %}
+            {% include "partials/_section-team.html" %}
+        {% endfor %}
+
+        {% include "partials/_section-partners.html" %}
+
+    </main>
+
+    {% include "partials/_footer.html" %}
+
+{% endblock %}

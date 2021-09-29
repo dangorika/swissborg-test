@@ -1,0 +1,35 @@
+{% set values = [
+    {
+        title: 'Safe & Secure',
+        text: 'We strive to make investing in cryptos as normal as having a bank account'
+    },
+    {
+        title: 'Accessible',
+        text: 'Institutional grade cutting rdge technology available to everyone at their fingertips'
+    },
+    {
+        title: 'Transparent',
+        text: 'All services will be viewable and trackable by our users, anytime and at their own will'
+    },
+    {
+        title: 'Community',
+        text: 'We encourage our community to guide us, and reward them for their contributions'
+    }
+] %}
+
+<!-- begin section -->
+<section class="section values">
+    <div class="l">
+        <div class="values__in">
+            <h3 class="values__title title">Our Values</h3>
+            <div class="values__items">
+                {% for item in values %}
+                <div class="values__item">
+                   {% include "components/_value.html" %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->

@@ -1,0 +1,21 @@
+<!-- begin section -->
+<section class="section numbers{%if numbers.quadruple %} numbers_quadruple{%endif%}{%if numbers.triple%} numbers_triple{%endif%} js-numbers js-section-numbers">
+    <div class="l">
+        <div class="numbers__in">
+            <h2 class="numbers__title title js-reveal">{{ numbers.title | safe }}</h2>
+        </div>
+
+        <div class="numbers__shape js-numbers-shape">
+            <div class="numbers__shapebox js-reveal">
+                {% if numbers.triple %}
+                    {% include "components/_numbers-shape-reflect.html" %}
+                {% else %}
+                    {{ mixins.image('numbers') }}
+                {% endif %}
+            </div>
+
+            {% include "components/_counter.html" %}
+        </div>
+    </div>
+</section>
+<!-- end section -->

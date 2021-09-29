@@ -1,0 +1,90 @@
+.footer
+    $this: &
+    // margin-top: 250px
+    padding: 0 0 80px
+    // background: $dark-background
+    background: linear-gradient(to bottom, #191f29 15.4%, #132d46 100%)
+    color: $white
+    position: relative
+    // overflow-x: hidden
+    // +r($t-lg)
+    //     margin-top: 280px
+    // +r($m-lg)
+    //     margin-top: 160px
+    &__in
+        padding-top: 80px
+    &__top
+        display: flex
+        margin-bottom: 180px
+        +r($t-lg)
+            display: block
+            margin-bottom: 124px
+        +r($m-lg)
+            margin-bottom: 46px
+    &__bottom
+        display: flex
+        +r($t-lg)
+            flex-direction: column
+        #{$this}__col_l
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            +r($t-lg)
+                order: 1
+                flex-direction: row
+                align-items: flex-end
+            +r($m-lg)
+                flex-direction: column
+                align-items: stretch
+        #{$this}__col_r
+            +r($t-lg)
+                order: 0
+                margin-bottom: 74px
+            +r($m-lg)
+                margin-bottom: 7px
+    &__col
+        +r($t-lg)
+            width: 100%
+        &_l
+            width: percentage(480/1200)
+            +r($t-lg)
+                margin-bottom: 92px
+            +r($m-lg)
+                margin-bottom: 36px
+        &_r
+            width: percentage(720/1200)
+    &__links
+        a
+            display: inline-block
+            font-size: 16px
+            line-height: 1.125
+            text-decoration: underline
+            color: $grey-light
+            margin-right: 27px
+            margin-bottom: 27px
+            transition: color .3s $easing-common
+            &:hover
+                color: $green-positive
+            +r($t-lg)
+                margin-bottom: 7px
+                margin-right: 0
+                margin-left: 27px
+            +r($m-lg)
+                margin-left: 0
+                margin-right: 27px
+
+    .contact
+        &__links
+            color: $light
+
+    &__waves
+        position: relative
+        top: -2px
+        height: 0
+        padding-top: 11.4%
+        background-color: $white
+    &__wave
+        +coverdiv
+        background-repeat: no-repeat
+        background-position: 50% 0%
+        background-size: 102% 102%

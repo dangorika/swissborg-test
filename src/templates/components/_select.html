@@ -1,0 +1,7 @@
+<!-- begin select-->
+<select class="select js-select{%if item.is_tag%} js-tag-select{%endif%}{%if item.is_location%} js-location-select{%endif%}{%if item.is_blog%} js-blog-select{%endif%}">
+    {% for item in item.options %}
+    <option value="{{ item.value }}"{%if item.selected%} selected{%endif%}>{{ item.option }}</option>
+    {% endfor %}
+</select>
+<!-- end select-->

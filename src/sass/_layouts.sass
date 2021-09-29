@@ -1,0 +1,68 @@
+.out
+    width: 100%
+    &_page
+        overflow: hidden
+        position: relative
+
+.l
+    width: 100%
+    max-width: 1260px
+    margin: 0 auto
+    padding: 0 30px
+    +r($m-lg)
+        padding: 0 15px
+
+.l-col
+    width: 50%
+    &:nth-child(1)
+        padding-right: 24px
+        +r($t-lg)
+            padding-right: 0
+    &:nth-child(2)
+        padding-left: 24px
+        +r($t-lg)
+            padding-left: 0
+    +r($t-lg)
+        width: 100%
+
+.l-col-list
+    display: flex
+    flex-wrap: wrap
+    margin-left: -24px
+    margin-right: -24px
+    &__item
+        width: 25%
+        padding: 0 24px
+        +r($t-lg)
+            width: 50%
+            margin-bottom: 48px
+        +r($m-lg)
+            width: 100%
+        &_33
+          width: 33.3333%
+
+
+.container
+    position: relative
+    z-index: 99
+    min-height: 47vw
+    &_cases
+        min-height: 20vw
+    &_footer
+        padding-bottom: 100px
+        +r($t-lg)
+            padding-bottom: 70px
+        .waves
+            top: auto
+            bottom: -250px
+            height: 924px
+            min-width: 768px
+            left: 50%
+            transform: translateX(-50%)
+            +r($t-lg)
+                bottom: -280px
+            +r($m-lg)
+                bottom: -160px
+.centered
+    text-align: center
+    flex-basis: 100%

@@ -1,0 +1,41 @@
+.articles
+    padding: 40px 0 120px
+    width: 100%
+    +r($m-lg)
+        padding-top: 46px
+    &__title
+        padding-bottom: 32px
+        margin-bottom: 25px
+        border-bottom: 1px solid $light
+    &__in
+        display: flex
+        justify-content: space-between
+    &__items
+        // width: 100%
+        // max-width: 785px
+        // margin-right: 48px
+        width: percentage(785/1200)
+        padding-right: 24px
+        +r($t-lg)
+            margin-right: 0
+            width: 100%
+        &-in
+            position: relative
+            overflow: hidden
+    .article-box
+        margin-bottom: 42px
+        padding-bottom: 48px
+        border-bottom: 1px solid $light
+        height: auto
+        +r($m-lg)
+            padding-bottom: 35px
+            margin-bottom: 24px
+    &__podcasts
+        // max-width: 368px
+        width: percentage(368/1200)
+        padding-left: 24px
+        +r($t-lg)
+            display: none
+    &__link
+        +r($t-lg)
+            text-align: center

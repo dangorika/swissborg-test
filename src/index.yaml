@@ -1,0 +1,36 @@
+ProjectTitle: swiss-borg
+
+PageList:
+- file: home.html
+  ready: 50
+- file: swissborg-solutions.html
+  ready: 50
+- file: iso-platform.html
+  ready: 50
+- file: cripto-indexes.html
+  ready: 50
+- file: smart-wallet.html
+  ready: 50
+- file: use-cases.html
+  ready: 50
+- file: blog.html
+  ready: 50
+- file: blog-article.html
+  ready: 50
+- file: press.html
+  ready: 50
+- file: press-releases.html
+  ready: 50
+- file: knowledge-center.html
+  ready: 50
+- file: team.html
+  ready: 50
+- file: careers.html
+  ready: 50
+- file: careers-financial-scale-engineer.html
+  ready: 50
+- file: contact-us.html
+  ready: 50
+- file: about.html
+  ready: 10
+

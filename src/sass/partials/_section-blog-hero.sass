@@ -1,0 +1,26 @@
+.blog-hero
+    &__in
+        // margin-bottom: 40px
+        // padding-bottom: 62px
+        padding: 60px 0 64px
+        border-bottom: 1px solid $light
+        +r($t-lg)
+            padding: 30px 0
+        +r($m-lg)
+            padding: 0 0 30px
+    .article-box
+        &__text
+            +r($m-lg)
+                flex-grow: 0
+            h4
+                +r($m-lg)
+                    font-size: 24px
+                    line-height: 1.08
+        &__wrap
+            +r($m-lg)
+               justify-content: flex-end
+    .article-preview
+        &__title
+            &.title
+                +r($m-lg)
+                    font-size: 40px

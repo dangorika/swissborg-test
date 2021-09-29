@@ -1,0 +1,72 @@
+---
+title: Home
+home: true
+footer_extended: true
+header_unfixed: true
+
+numbers:
+    title: Key Numbers
+    list:
+        -
+            figure: 22,194
+            text: CHSB Holders
+        -
+            figure: 23,872
+            text: Participants
+        -
+            figure: 149
+            text: Countries
+        -
+            figure: 50
+            figure_text: millions
+            text: CHF Raised
+
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    {% include "partials/_hero.html" %}
+    {% include "partials/_header.html" %}
+
+    <main class="main home">
+        <div class="container container_app">
+            {% include "partials/_section-app.html" %}
+            <div class="waves js-waves js-waves-app">
+                {% include "waves/_wave-app.html" %}
+            </div>
+        </div>
+
+        <div class="container container_limit">
+            {% include "partials/_section-limit.html" %}
+            <div class="waves js-waves js-waves-limit">
+                {% include "waves/_wave-limit.html" %}
+            </div>
+        </div>
+
+        {% include "partials/_section-solutions.html" %}
+        {% include "partials/_section-numbers.html" %}
+
+        <div class="container container_cases">
+            {% include "partials/_section-cases.html" %}
+            <div class="waves js-waves js-waves-cases">
+                {% include "waves/_wave-cases.html" %}
+            </div>
+        </div>
+
+        {% include "partials/_section-token.html" %}
+        {% include "partials/_section-logos.html" %}
+        {% include "partials/_section-resources.html" %}
+
+        <div class="container container_logos">
+            {% include "partials/_section-about.html" %}
+            <div class="waves js-waves js-waves-logos">
+                {% include "waves/_wave-footer.html" %}
+            </div>
+        </div>
+
+    </main>
+
+    {% include "partials/_footer.html" %}
+
+{% endblock %}

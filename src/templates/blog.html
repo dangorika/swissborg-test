@@ -1,0 +1,93 @@
+---
+title: Blog
+header_dark: true
+
+hero: [
+    {
+        title: 'Discover more',
+        titleWhite: true,
+        filters: [
+            {
+                title: 'Section:',
+                selects: [
+                    {
+                        is_blog: true,
+                        options: [
+                            {
+                                option: 'All sections',
+                                value: 'all_sections'
+                            },
+                            {
+                                option: 'Events',
+                                value: 'Events'
+                            },
+                            {
+                                option: 'Meet The Team',
+                                value: 'Meet The Team'
+                            },
+                            {
+                                option: 'ICO Chronicles',
+                                value: 'ICO Chronicles'
+                            },
+                            {
+                                option: 'Crypto Quant Insights',
+                                value: 'Crypto Quant Insights'
+                            },
+                            {
+                                option: 'Referendum',
+                                value: 'Referendum'
+                            }
+                        ]
+                    }
+                ],
+                searchtool: true
+            }
+        ]
+    }
+]
+
+podcasts: [
+    {
+        title: 'Crypto Unchained - Smart contracts and the future of ICO’s',
+        date: 'Sep 21',
+        time: '20 min'
+    },
+    {
+        title: 'Crypto Unchained - Crypto Millionaire Erica Stanford: Beyond the hype',
+        date: 'Sep 21',
+        time: '20 min'
+    },
+    {
+        title: 'Crypto Unchained - Blockchain, Brexit & the legal landscape',
+        date: 'Sep 21',
+        time: '20 min'
+    },
+    {
+        title: 'Crypto Unchained - How blockchain can learn from old-school finance',
+        date: 'Sep 21',
+        time: '20 min'
+    }
+]
+
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    {% include "partials/_header.html" %}
+
+    <main class="main blog">
+
+        {% for item in hero %}
+            {% include "partials/_page-hero.html" %}
+        {% endfor %}
+
+        {% include "partials/_section-blog-hero.html" %}
+
+        {% include "partials/_section-articles.html" %}
+
+    </main>
+
+    {% include "partials/_footer.html" %}
+
+{% endblock %}

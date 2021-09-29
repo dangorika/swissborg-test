@@ -1,0 +1,55 @@
+.article-preview
+    display: flex
+    width: 100%
+    overflow: hidden
+    +r($t-lg)
+        display: block
+    &__topbar
+        padding-bottom: 10px
+        margin-bottom: 28px
+        border-bottom: 1px solid $light
+        display: flex
+        justify-content: space-between
+        align-items: center
+        +r($t-lg)
+            margin-bottom: 26px
+    &__link
+         +r($t-lg)
+            display: none
+    &__title
+        &.title
+            +r($m-lg)
+                font-size: 60px
+    &__col
+        &_l
+            width: percentage(784/1200)
+        &_r
+            width: percentage(416/1200)
+            +r($t-lg)
+                display: flex
+            +r($m-lg)
+                display: block
+            .article-box
+                margin-bottom: 17px
+                &:last-child
+                    margin-bottom: 0
+        .article-box_small
+            margin-bottom: 12px
+            +r($m-lg)
+                margin-bottom: 8px
+    &__box
+        width: 100%
+        min-width: 335px
+        +r($m-lg)
+            min-width: auto
+            padding-bottom: 8px
+            border-bottom: 1px solid $light
+    &__podcasts
+        display: none
+        padding-left: 39px
+        +r($t-lg)
+            display: block
+        +r($m-lg)
+            padding: 46px 0 0 0
+
+

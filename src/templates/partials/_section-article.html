@@ -1,0 +1,51 @@
+<!-- begin section -->
+<section class="section article{% if item.mod %} article_{{item.mod}}{% endif %}">
+    <div class="l">
+        <div class="article__in">
+            <div class="article__content">
+                <div class="article__btn-back">
+                    <a href="#" class="link link_prev">{{item.btnBack}}</a>
+                </div>
+
+                <div class="article__meta">
+                    <div class="article__tag tag tag_green">{{item.tag}}</div>
+                    <div class="article__date">
+                        <span>{{item.date}}</span>
+                        -
+                        <span>3 min read</span>
+                    </div>
+                </div>
+
+                <div class="article__heading">
+                    <h3 class="article__title title">{{item.title}}</h3>
+                    {% if item.button %}
+                    <div class="article__button">
+                        <a href="#" class="button button_primary">{{item.button}}</a>
+                    </div>
+                    {% endif %}
+                </div>
+
+                {% if item.subtitle %}
+                <div class="article__subtitle">
+                    {{item.subtitle | safe}}
+                </div>
+                {% endif %}
+
+                <div class="article__wrap">
+                    <div class="article__img">
+                        <img src="img/article.jpg" alt="" />
+                    </div>
+                    {{ item.content | safe }}
+                </div>
+
+                {% if item.button %}
+                <div class="article__button">
+                    <a href="#" class="button button_primary">{{item.button}}</a>
+                </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->

@@ -1,0 +1,169 @@
+---
+title: Careers
+header_dark: true
+
+hero: [
+    {
+        title: 'Careers at SwissBorg',
+        titleWhite: true,
+        text: '<p>We aim to build a meritocratic community around a transparent and democratic investment environment where financial services will always be delivered in accordance with community expectations. We will build trust with our users around the future of crypto assets as an investment and daily banking utility.</p>'
+    }
+]
+
+careers_filter:
+    -
+        is_tag: true
+        options:
+            -
+                option: All tags
+                value: all_tags
+                selected: true
+            -
+                option: Engineering
+                value: Engineering
+            -
+                option: Investment
+                value: Investment
+            -
+                option: Legal
+                value: Legal
+            -
+                option: Marketing
+                value: Marketing
+            -
+                option: Operations
+                value: Operations
+            -
+                option: Uncategorized
+                value: Uncategorized
+    -
+        is_location: true
+        options:
+            -
+                option: All locations
+                value: all_locations
+                selected: true
+            -
+                option: Lausanne, Switzelend
+                value: Lausanne, Switzelend
+            -
+                option: London, United Kingdom
+                value: London, United Kingdom
+            -
+                option: Tokyo, Japan
+                value: Tokyo, Japan
+            -
+                option: Vilnius, Lithuania
+                value: Vilnius, Lithuania
+            -
+                option: Toronto, Canada
+                value: Toronto, Canada
+
+careers_results:
+    -
+        tag: Engineering
+        list:
+            -
+                title: Financial Scala Engineer
+                location: Lausanne, Switzelend
+                tag: Engineering
+            -
+                title: Financial Scala Engineer
+                location: Toronto, Canada
+                tag: Engineering
+            -
+                title: Scala Backend Engineer
+                location: London, United Kingdom
+                tag: Engineering
+            -
+                title: Senior Python Developer. Financial Markets
+                location: Toronto, Canada
+                tag: Engineering
+            -
+                title: Software Security Engineer
+                location: London, United Kingdom
+                tag: Engineering
+    -
+        tag: Investment
+        list:
+            -
+                title: Junior Quantitative Crypto Analyst
+                location: Tokyo, Japan
+                tag: Investment
+            -
+                title: Quantitative Crypto analyst
+                location: Toronto, Canada
+                tag: Investment
+    -
+        tag: Legal
+        list:
+            -
+                title: Legal Intern - 100% - CDD 6 Months
+                location: Lausanne, Switzelend
+                tag: Legal
+    -
+        tag: Marketing
+        list:
+            -
+                title: Digital Marketing
+                location: Lausanne, Switzelend
+                tag: Marketing
+            -
+                title: Graphic Designer - Internship 6 months
+                location: London, United Kingdom
+                tag: Marketing
+            -
+                title: Head of Community Support
+                location: Vilnius, Lithuania
+                tag: Marketing
+            -
+                title: Korean Community Manager
+                location: Tokyo, Japan
+                tag: Marketing
+            -
+                title: PR Manager
+                location: Lausanne, Switzelend
+                tag: Marketing
+    -
+        tag: Operations
+        list:
+            -
+                title: Business Process Manager
+                location: Lausanne, Switzelend
+                tag: Operations
+            -
+                title: Controller/Accountant - 100% - CDI
+                location: London, United Kingdom
+                tag: Operations
+            -
+                title: Junior Strategist
+                location: Vilnius, Lithuania
+                tag: Operations
+    -
+        tag: Uncategorized
+        list:
+            -
+                title: Spontaneous Application
+                location: Lausanne, Switzelend
+                tag: Uncategorized
+
+
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    {% include "partials/_header.html" %}
+
+    <main class="main careers">
+        {% for item in hero %}
+            {% include "partials/_page-hero.html" %}
+        {% endfor %}
+
+        {% include "partials/_section-list-block.html" %}
+        {% include "partials/_section-careers-filter.html" %}
+    </main>
+
+    {% include "partials/_footer.html" %}
+
+{% endblock %}

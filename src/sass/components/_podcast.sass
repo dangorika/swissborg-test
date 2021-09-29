@@ -1,0 +1,50 @@
+.podcasts
+    &__title
+        padding-bottom: 10px
+        margin-bottom: 28px
+        border-bottom: 1px solid $light
+        +r($t-lg)
+            margin-bottom: 20px
+        +r($m-lg)
+            padding-bottom: 34px
+            margin-bottom: 20px
+    &__item
+        margin-bottom: 15px
+
+.podcast
+    $this: &
+    display: block
+    position: relative
+    padding-left: 56px
+    &__title
+        transition: opacity .3s $easing-common
+        h4
+            margin-bottom: 8px
+            +tt-demi
+            font-weight: normal
+            font-size: 24px
+            line-height: 1.05
+            color: $black
+    &__date
+        font-size: 16px
+        line-height: 1.1
+        color: $grey-light
+    &__btn
+        position: absolute
+        left: 0
+        width: 32px
+        height: 32px
+        background-color: $green-positive
+        border-radius: 8px
+        transition: background-color .3s $easing-common
+        &:hover
+            background-color: $green-light
+        svg
+            +vcenter
+            margin-left: 1px
+            width: 16px
+            height: 16px
+
+    &:hover
+        #{$this}__title
+            opacity: .5

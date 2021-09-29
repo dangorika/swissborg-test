@@ -1,0 +1,39 @@
+.limit
+    // background: $dark-background
+    background: linear-gradient(rgba(25,31,41,1), rgba(19,45,70,1))
+    color: $white
+    position: relative
+    &__in
+        padding: 60px 0 400px
+        position: relative
+        z-index: 2
+        +r($t-lg)
+            padding: 144px 0 306px
+        +r($m-lg)
+            padding: 36px 0 116px
+    &__title
+        margin-bottom: 135px
+        +r($t-lg)
+            margin-bottom: 144px
+        +r($m-lg)
+            margin-bottom: 38px
+        // opacity: 0
+    &__boxes
+        display: flex
+        +r($t-lg)
+            display: block
+    &__box
+        // opacity: 0
+        +r($t-lg)
+            width: 100%
+            padding-left: 44px
+            margin-bottom: 40px
+        +r($m-lg)
+            padding-left: 0
+        &.l-col
+            &:nth-child(2)
+                +r($t-lg)
+                    padding-left: 44px
+                +r($m-lg)
+                    padding-left: 0
+

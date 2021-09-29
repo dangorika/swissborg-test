@@ -1,0 +1,9 @@
+<!-- begin tab -->
+<a href="{{ s.url }}" class="tab js-tab{%if s.active%} is-active{%endif%}" data-tab="{{ s.tab }}">
+    <div class="tab__img">
+        <img src="{{ s.img }}" alt="" />
+    </div>
+    <div class="tab__text text">{{ s.text | safe }}</div>
+    <div class="tab__text tab__text_mob text js-mob-description">{{ s.description | safe }}</div>
+</a>
+<!-- end tab -->

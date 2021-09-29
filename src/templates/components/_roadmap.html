@@ -1,0 +1,35 @@
+<!-- begin roadmap -->
+<div class="roadmap js-reveal">
+    <div class="roadmap__slider swiper-container js-roadmap" data-initial-slide="0">
+        <div class="roadmap__track swiper-wrapper">
+            {% for i in roadmap %}
+            <div class="roadmap__slide swiper-slide">
+                <div class="roadmap__info{%if i.year%} roadmap__info_year{%endif%}{%if i.bottom%} roadmap__info_bottom{%endif%} ">
+                    {% if i.year %}
+                    <h3 class="roadmap__year title title_white">{{ i.year }}</h3>
+                    {% endif %}
+
+                    <div class="roadmap__description">
+                        <div class="roadmap__text">{{ i.text }}</div>
+                        {% if i.circle %}
+                        <div class="roadmap__circle">{{ i.circle }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="roadmap__controls">
+        <button class="button control js-roadmap-prev">
+            {{ mixins.icon('arrow-prev') }}
+            <span class="control__text">Prev</span>
+        </button>
+        <button class="button control js-roadmap-next">
+            <span class="control__text">Next</span>
+            {{ mixins.icon('arrow-next') }}
+        </button>
+    </div>
+</div>
+<!-- end roadmap -->

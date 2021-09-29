@@ -1,0 +1,416 @@
+
+.sections-wrapper
+  position: relative
+  overflow-y: hidden
+  z-index: 10
+  position: absolute
+  width: 100%
+  height: 100%
+  +touch
+    height: auto
+    position: static
+  &__slide
+    height: 100vh
+    width: 100%
+    overflow: hidden
+    color: #fff
+    position: fixed
+    left: 0
+    top: 0
+    +touch
+      height: auto
+      position: static
+
+    [data-stagger]
+      opacity: 0
+      +touch
+        opacity: 1
+    &.is-active
+      +not-touch
+        z-index: 10
+        // .screen-slide-title
+          // color: red!important
+  &__titles-wrap
+    position: absolute
+    z-index: 10
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    perspective-origin: 50% 30%
+    perspective: 1000px
+  &__bg-wrap
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    z-index: -110
+  &__bg-wrap
+    opacity: 0
+    transition: opacity 1s
+    // +touch
+    //   opacity: 1
+    &.prepared
+      opacity: 1
+    // background-image: linear-gradient(#191E29 20%, transparent)
+  &__bg-grad
+    height: 200%
+    width: 100%
+    background-image: linear-gradient(rgba(#191E29, 0.6) , #01C38D)
+  &__canvas-wrap
+    z-index: -100
+    position: fixed
+    top: 0
+    left: 0
+    opacity: 0.5
+    transition: opacity 0.4s
+    &.prepared
+        opacity: 1
+
+.screen-slide-title
+  display: inline-block
+  vertical-align: top
+  user-select: none
+  // transition: opacity 2s
+  // opacity: 0
+  &:not(.title_green)
+      color: #fff
+  +touch
+    display: block
+  &.prepared
+    position: absolute
+    // display: inline-block
+    display: block
+
+    // vertical-align: top
+    left: 33.3333333%
+    transform-origin: 50% 50%
+    top: 0px
+    z-index: 50
+    filter: blur(8px)
+
+    opacity: 0.08
+    visibility: hidden
+    //transformPersepective: -100
+    //-webkit-transform-style: flat
+    +md
+      display: none
+  // &.title_green
+  //   line-height: 0.8
+  &.is-visible
+    // z-index: 60
+    visibility: visible
+
+  &.reset-filter
+    filter: none!important
+  &.is-hidden
+    display: none
+  i, em
+      font-style: normal
+      display: block
+      text-align: right
+      font-size: 66px
+      position: relative
+      top:  - 12px
+      +touch
+        font-size: 40px
+        text-align: left
+        top: 0
+.screen-slide
+  height: 100%
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  overflow: hidden
+  padding-top: 20vh
+  padding-bottom: 10vh
+  position: relative
+  +touch
+    padding-top: 0px
+    padding-bottom: 60px
+  +sm
+    padding-bottom: 30px
+  &__inner
+    display: flex
+    height: 100%
+    flex-direction: column
+    width: 100%
+    justify-content: space-between
+    +touch
+      height: auto
+  .screen-slide-title
+    +not-touch
+      color: transparent
+  &__title-text
+    color: $grey-light
+  &__side-content
+    margin-left: auto
+    margin-right: auto
+    max-width: 480px
+    +touch
+      max-width: 100%
+    .title, p
+      margin-bottom: 24px
+      color: $white
+    &_small
+      max-width: 368px
+  &__cols
+    +touch
+      padding-top: 40px
+    &_mt-sm
+
+      .screen-slide-col
+        +not-touch
+          &:nth-of-type(1)
+            margin-bottom: 4vh
+          &:nth-of-type(2)
+            margin-bottom: 4vh
+          &:nth-of-type(3)
+            margin-bottom: 4vh
+  &_vertical
+    align-items: center
+    .screen-slide__title-wrap
+      max-width: 520px
+      margin-left: auto
+      +touch
+        max-width: 100%
+  &_year
+    padding-bottom: 2vh
+    .screen-slide__side-content
+      margin: 0
+    .screen-slide__title-wrap
+      text-align: right
+    .l-col-list
+      .l-col
+          &:nth-of-type(odd)
+            width: 42.5%
+          &:nth-of-type(even)
+            width: 57.5%
+  &_text-screen
+    .l-col-list
+      .l-col
+          &:nth-of-type(odd)
+            width: 56%
+          &:nth-of-type(even)
+          width: 44%
+  &_year, &_text-screen
+    .l-col-list
+      .l-col
+        +touch
+          width: 100%!important
+          margin-bottom: 20px
+          padding: 0
+  &_pb-sm
+    padding-bottom: 5vh
+    .screen-slide__title-wrap
+      max-width: 100%
+  h3.title
+    +touch
+      font-size: 24px
+  .centered
+    margin-top: 100px
+    +touch
+      margin: 0
+  .l-col-list
+    width: 100%
+    &__item
+      +sm
+        padding: 0
+  .l
+    +r($t-lg)
+      padding: 0 15px
+      .l-col-list
+        margin: 0
+  .l-col-list
+      margin-left: 0
+      margin-right: 0
+.screen-slide-col
+  &__inner
+    max-width: 270px
+    +sm
+      max-width: 100%
+  &__img
+    padding-left: 15px
+    margin-bottom: 4vh
+    +touch
+      margin-bottom: 40px
+    +sm
+      padding-left: 0
+      text-align: center
+    &_number
+      padding-left: 0
+      max-height: 28px
+      width: auto
+      margin-bottom: 26px
+      +sm
+        text-align: left
+    img, svg
+      // max-width: 100%
+      display: block
+      max-width: 140px
+      margin-left: auto
+      margin-right: auto
+      max-height: 140px
+  &__text
+    strong, b
+      display: block
+      +tt-demi
+      font-size: 24px
+    i, em
+      font-style: normal
+      +sm
+        display: block
+    &_mob-center
+      +sm
+        text-align: center
+.logos-plate
+  display: flex
+  flex-wrap: wrap
+  font-size: 0
+  +touch
+    margin: 30px 0 30px
+  &__item
+    width: 33.3333%
+
+    display: inline-flex
+    align-items: center
+    min-height: 72px
+    padding: 0 5px
+    +xs
+      width: 50%
+    img
+      max-width: 100%
+      height: auto
+      max-height: 80px
+  a
+    opacity: .25
+    +not-touch
+      transition: opacity 0.3s
+      &:hover
+        opacity: 1
+
+body
+  &.scroller-body
+    background: $dark-background
+    width: 100%
+    min-height: 100vh
+    // background-image: linear-gradient(rgba(#191E29, 0.3) , rgba(#01C38D, 0.5))
+    // position: fixed
+    // top: 0
+    // left: 0
+    // +not-touch
+    //   position: static
+
+    .out
+      position: fixed
+      width: 100vw
+      height: 100vh
+
+      +touch
+        width: 100%
+        height: auto
+        position: static
+        padding-top: 100px
+      +not-touch
+        perspective-origin: 50% 30%
+        perspective: 1000px
+  .title_green
+    font-size: 132px
+    text-align: right
+    +touch
+      font-size: 66px!important
+      text-align: left
+  &.ie
+    .screen-slide-title
+      &.prepared
+        opacity: 0.02
+  &.edge
+    .screen-slide-title
+      &.prepared
+        filter: blur(3px)
+  &.safari
+    .screen-slide-title
+      &.prepared
+        filter: blur(5px)
+  &.firefox
+    .screen-slide-title
+      &.prepared
+        // opacity: 0.5
+        // filter: blur(7px)
+      &.is-visible
+        // opacity: 0.1
+        // z-index: 51
+        filter: blur(7px)
+
+
+.date-nav
+  position: fixed
+  right: 65px
+  color: $green-positive
+  top: 50%
+  transition: opacity 0.3s, transform 0.3s
+  z-index: 11
+  transform: translate(0px, -50%)
+  opacity: 1
+  +r($d-sm)
+    right: 20px
+  +touch
+    display: none
+  a
+    display: block
+    position: relative
+    text-align: right
+    margin-bottom: 16px
+    font-size: 18px
+    min-height: 18px
+    padding-right: 15px
+    line-height: 1
+    &:last-of-type
+      margin-bottom: 0
+    +rh(700)
+      margin-bottom: 10px
+    &:after, &:before
+      content: ""
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+    &:after
+      height: 2px
+      width: 5px
+      background: $white
+      transition: background 0.3s
+      right: 0px
+    &:before
+      right: -5px
+      bottom: -5px
+      left: -5px
+      top: -5px
+    i, em
+      font-style: normal
+    span
+      transform:  translateX(10px)
+      display: block
+      opacity: 0
+      line-height: 1
+      transition: transform 0.3s, opacity 0.3s
+    +not-touch
+      &:hover
+        span
+          transform:  translateX(0px)
+          opacity: 1
+          &:after
+            background: $green-positive
+    &.is-active
+      &:after
+        background: $green-positive
+  &:not(.is-visible)
+    transform: translate(20px, -50%)
+    opacity: 0
+    user-select: none
+    pointer-events: none
+
+
+
+
+

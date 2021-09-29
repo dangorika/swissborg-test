@@ -1,0 +1,44 @@
+---
+title: Cripto Indexes
+header_dark: true
+hero: [
+    {
+        title: 'Cripto Indexes',
+        titleWhite: true,
+        text: '<p>SwissBorg provides investors with a transparent, diversified and unbiased source of performance through indexed and advanced investment strategies.</p>'
+    }
+]
+
+preview_boxes: [
+    {
+        title: 'SwissBorg Large Cap Index',
+        text: 'The SwissBorg 20 Index tracks the performance of the Top 20 Cryptoassets weighted by market capitalization and capped at 20% per component. USD Tether and any other stablecoins are excluded from the calculation. The weights are recalculated and adjusted every 20 days.'
+    },
+    {
+        title: 'SwissBorg Next 30',
+        text: 'The SwissBorg 30 Index is representative of smaller capitalization Cryptoassets. It tracks the performance of the Top 30 Cryptoassets after the Top 20, weighted by market capitalization and capped at 5% per component. USD Tether and any other stablecoins are excluded from the calculation. The weights are recalculated and adjusted every 20 days.'
+    }
+]
+
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    {% include "partials/_header.html" %}
+
+    <main class="main cripto-indexes">
+
+        {% for item in hero %}
+            {% include "partials/_page-hero.html" %}
+        {% endfor %}
+
+        {% include "partials/_section-preview-boxes.html" %}
+
+        {% include "partials/_section-charts.html" %}
+
+    </main>
+
+    {% include "partials/_footer.html" %}
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% set partners = [
+    {
+        img: 'img/partners/partner_1.jpg'
+    },
+    {
+        img: 'img/partners/partner_2.jpg'
+    },
+    {
+        img: 'img/partners/partner_3.jpg'
+    },
+    {
+        img: 'img/partners/partner_4.jpg'
+    },
+    {
+        img: 'img/partners/partner_5.jpg'
+    },
+    {
+        img: 'img/partners/partner_6.jpg'
+    },
+    {
+        img: 'img/partners/partner_7.jpg'
+    },
+    {
+        img: 'img/partners/partner_8.jpg'
+    },
+    {
+        img: 'img/partners/partner_9.jpg'
+    }
+] %}
+
+<!-- begin section -->
+<section class="section partners">
+    <div class="l">
+        <div class="partners__in">
+            <h3 class="partners__title title">Partners</h3>
+            <div class="partners__items">
+                {% for item in partners %}
+                    <a href="" class="partners__item">
+                        <img src="{{item.img}}" alt="" />
+                        <img src="{{item.img}}" alt="" />
+                    </a>
+                {% endfor %}
+            </div>
+            <div class="partners__link"><span>Want to partner with us?</span><a href="#" class="link link_next">Contact us</a></div>
+        </div>
+    </div>
+</section>
+<!-- end section -->

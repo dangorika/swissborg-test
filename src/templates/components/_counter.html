@@ -1,0 +1,11 @@
+<!-- begin counter -->
+<div class="counter{%if numbers.quadruple%} counter_quadruple{%endif%}{%if numbers.triple%} counter_triple{%endif%}">
+    {% for i in numbers.list %}
+    <div class="counter__item js-reveal">
+        <div class="counter__line"></div>
+        <div class="counter__figure js-numbers-figure"><span>{{ i.figure | safe }}</span>{{ i.figure_text | safe }}</div>
+        <div class="counter__text">{{ i.text | safe }}</div>
+    </div>
+    {% endfor %}
+</div>
+<!-- end counter -->

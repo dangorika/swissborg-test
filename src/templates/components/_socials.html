@@ -1,0 +1,31 @@
+{% set socials = [
+    {
+        img: 'img/reddit.svg',
+        link: ''
+    },
+    {
+        img: 'img/telegram.svg',
+        link: ''
+    },
+    {
+        img: 'img/youtube.png',
+        link: ''
+    },
+    {
+        img: 'img/facebook.svg',
+        link: ''
+    },
+    {
+        img: 'img/twitter.svg',
+        link: ''
+    }
+] %}
+
+<div class="socials">
+    <h3 class="socials__title">Join the community</h3>
+    <div class="socials__icons">
+        {% for i in socials %}
+        <a href="{{ i.link }}" class="social"><img src="{{ i.img }}" alt="" /></a>
+        {% endfor %}
+    </div>
+</div>

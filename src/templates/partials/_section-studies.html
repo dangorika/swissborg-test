@@ -1,0 +1,29 @@
+{% set studies_list = [
+    {
+        image: 'banks.jpg',
+        structure: 'Banks',
+        company_name: 'Company Name',
+        case_name: 'Name of Case'
+    },
+    {
+        image: 'exchanges.jpg',
+        structure: 'Exchanges',
+        company_name: 'Company Name',
+        case_name: 'Name of Case'
+    }
+] %}
+
+<!-- begin section -->
+<section class="section studies">
+    <div class="l">
+        <h3 class="studies__title title">Case Studies</h3>
+        <div class="studies__items">
+            {% for item in studies_list %}
+            <div class="studies__item l-col">
+                {% include "../components/_card.html" %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- end section -->

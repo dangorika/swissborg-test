@@ -1,0 +1,95 @@
+.map
+    position: relative
+    &__info
+        width: percentage(472/1200)
+        +r($t-lg)
+            width: 100%
+    &__links
+        max-width: 264px
+        border-bottom: 1px solid rgba($light, .1)
+        padding-bottom: 16px
+        margin-bottom: 30px
+        +r($t-lg)
+            max-width: none
+        +r($m-lg)
+            margin-bottom: 54px
+        a
+            display: inline-block
+            padding: 4px 0
+            +r($t-lg)
+                display: block
+            &:not(:last-child)
+                margin-bottom: 8px
+    &__pins
+        display: flex
+        flex-wrap: wrap
+        +r($m-lg)
+            margin-bottom: 12px
+    &__pin
+        margin-bottom: 30px
+        width: 50%
+        +r($t-lg)
+            width: 25%
+        +r($m-lg)
+            width: 50%
+            padding-right: 24px
+    &__canvas
+        width: percentage(887/1200)
+        position: absolute
+        top: 0
+        right: 0
+        +r($t-lg)
+            position: relative
+            width: 100%
+.map-canvas
+    svg
+        width: 100%
+        +r($m-lg)
+            height: auto
+    circle
+        opacity: 0
+        transition: opacity .3s $easing-common
+        &.is-active
+            opacity: 1
+    &_white
+        circle
+            fill: $green-positive
+.pin-icon
+    width: 18px
+    height: 18px
+    line-height: 20px
+    text-align: center
+    border-radius: 50%
+    background: $gradient-background
+    color: $white
+    font-size: 14px
+    display: block
+    position: relative
+    z-index: 2
+    pointer-events: none
+.pin
+    $this: &
+    transition: color .3s $easing-common
+    &__icon
+        margin-bottom: 18px
+    &__link
+        font-size: 16px
+        color: $green-positive
+        transition: color .3s $easing-common
+        .icon
+            width: 16px
+            height: 14px
+            fill: $green-positive
+            margin-right: 4px
+            transition: color .3s $easing-common
+        &:hover
+            color: $green-light
+            .icon
+                fill: $green-light
+    &__text
+        white-space: nowrap
+        +r(336)
+            white-space: normal
+    &.is-active
+        color: $green-positive
+

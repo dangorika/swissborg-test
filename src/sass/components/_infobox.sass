@@ -1,0 +1,36 @@
+.infobox
+    $this: &
+    &__icon
+        width: 140px
+        height: 140px
+        margin-bottom: 34px
+        +r($m-lg)
+            width: 64px
+            height: 64px
+            margin-bottom: 36px
+        img
+            width: 100%
+            object-fit: contain
+            font-family: 'object-fit: contain;'
+    &__text
+        max-width: 368px
+        +r($t-lg)
+            max-width: 334px
+        +r($m-lg)
+            max-width: 480px
+        h4
+            +tt-demi
+            font-weight: normal
+            line-height: 1
+            font-size: 24px
+            margin-bottom: 10px
+            color: $black
+    &_small
+        #{$this}__icon
+            width: 32px
+            height: 32px
+            margin-bottom: 24px
+        #{$this}__text
+            max-width: 316px
+            +r($t-lg)
+                max-width: 316px

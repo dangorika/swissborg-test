@@ -1,0 +1,16 @@
+<!-- begin section -->
+<section class="section multiboxes">
+    <div class="l">
+        <div class="multiboxes__in">
+            <h3 class="multiboxes__title title">{{ multiboxes.title }}</h3>
+            <div class="multiboxes__items js-readmore" data-row-visible="2" data-tablet-row-visible="3" data-more-btn="View more" data-less-btn="View less">
+                {% for item in multiboxes.list %}
+                <div class="multiboxes__item">
+                   {% include "components/_multibox.html" %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->

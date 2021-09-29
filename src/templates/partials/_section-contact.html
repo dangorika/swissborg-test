@@ -1,0 +1,31 @@
+{% set pins = [
+    {
+        index: 1,
+        text: 'SwissBorg<br />Avenue d’Ouchy 4<br />1006 Lausanne<br />Switzerland'
+    },
+    {
+        index: 2,
+        text: 'SwissBorg<br />Avenue d’Ouchy 4<br />1006 Lausanne<br />Switzerland'
+    },
+    {
+        index: 3,
+        text: 'SwissBorg<br />Avenue d’Ouchy 4<br />1006 Lausanne<br />Switzerland'
+    },
+    {
+        index: 4,
+        text: 'SwissBorg<br />Avenue d’Ouchy 4<br />1006 Lausanne<br />Switzerland'
+    }
+] %}
+
+<!-- begin section -->
+<section class="section contact" id="contact">
+    <div class="l">
+        <div class="contact__in">
+            <h2 class="contact__title title{%if not map_white%} title_white{%endif%}">Contact Us</h2>
+            <div class="contact__map">
+                {% include "components/_map.html" %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->

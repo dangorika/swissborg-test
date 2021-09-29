@@ -1,0 +1,50 @@
+.logos
+    position: relative
+    z-index: 1
+    &__in
+        padding: 100px 0 145px
+        position: relative
+        z-index: 1
+        +r($t-lg)
+            padding: 100px 0 60px
+        +r($m-lg)
+            padding: 10px 0 60px
+    &__title
+        margin-bottom: 100px
+        +r($m-lg)
+            margin-bottom: 35px
+    &__slide
+        margin-bottom: 36px
+        +r($t-lg)
+            width: 50%
+            margin-bottom: 54px
+        +r($m-lg)
+            width: 100%
+            margin-bottom: 20px
+    // .swiper-wrapper
+    //     +r($t-lg)
+    //         flex-wrap: wrap
+
+
+.logo-img
+    $this: &
+    width: 100%
+    height: 80px
+    display: block
+    img
+        width: 100%
+        height: 100%
+        object-fit: contain
+        font-family: 'object-fit: contain;'
+        display: block
+        transition: opacity .3s $easing-common
+        opacity: 0
+        &:last-child
+            +coverdiv
+            z-index: 2
+            opacity: 0
+        &:first-child.swiper-lazy-loaded
+            opacity: 1
+    &:hover
+        img:last-child
+            opacity: 1

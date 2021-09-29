@@ -1,0 +1,124 @@
+---
+title: Press
+header_dark: true
+
+hero: [
+    {
+        title: 'Press information',
+        titleWhite: true,
+        text: '<p>We are the first wealth management platform for crypto based on the blockchain, made in Switzerland by a team of financial experts.<br />Our first products are referendum, ICO platform and smart wallet.</p>'
+    }
+]
+
+sections: [
+    {
+        title: 'Our team',
+        link: true
+    },
+    {
+        title: 'Advisors'
+    }
+]
+
+
+
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    {% include "partials/_header.html" %}
+
+    <main class="main press">
+
+        {% for item in hero %}
+            {% include "partials/_page-hero.html" %}
+        {% endfor %}
+
+
+        {% set multiboxes = {
+            title: 'In the News',
+            list: [
+                {
+                    img: 'img/fortuna.png',
+                    descr: '<h4>Fortuna</h4><p><em>Jul 27, 2018</em></p><p>Aenean vel urna dapibus, tristique neque eget, vehicula erat.</p>'
+                },
+                {
+                    img: 'img/wsj.png',
+                    descr: '<h4>Wall Street Journal</h4><p><em>Jul 27, 2018</em></p><p>Aenean vel urna dapibus, tristique neque eget, vehicula erat.</p>'
+                },
+                {
+                    img: 'img/coin.png',
+                    descr: '<h4>CoinDesk</h4><p><em>Jul 27, 2018</em></p><p>Aenean vel urna dapibus, tristique neque eget, vehicula erat.</p>'
+                },
+                {
+                    img: 'img/wsj.png',
+                    descr: '<h4>Wall Street Journal</h4><p><em>Jul 27, 2018</em></p><p>Aenean vel urna dapibus, tristique neque eget, vehicula erat.</p>'
+                },
+                {
+                    img: 'img/cnbc.png',
+                    descr: '<h4>CNBC</h4><p><em>Jul 27, 2018</em></p><p>Aenean vel urna dapibus, tristique neque eget, vehicula erat.</p>'
+                },
+                {
+                    img: 'img/fortuna.png',
+                    descr: '<h4>Fortuna</h4><p><em>Jul 27, 2018</em></p><p>Aenean vel urna dapibus, tristique neque eget, vehicula erat.</p>'
+                },
+                {
+                    img: 'img/fortuna.png',
+                    descr: '<h4>Fortuna</h4><p><em>Jul 27, 2018</em></p><p>Aenean vel urna dapibus, tristique neque eget, vehicula erat.</p>'
+                },
+                {
+                    img: 'img/coin.png',
+                    descr: '<h4>CoinDesk</h4><p><em>Jul 27, 2018</em></p><p>Aenean vel urna dapibus, tristique neque eget, vehicula erat.</p>'
+                }
+            ]
+        } %}
+        {% include "partials/_section-multiboxes.html" %}
+
+        {% set multiboxes = {
+            title: 'Press Releases',
+            list: [
+                {
+                    descr: '<h4>Aenean vel urna dapibus, tristique neque eget, vehicula.</h4><p><em>Jul 27, 2018</em></p>',
+                    link: 'download pdf'
+                },
+                {
+                    descr: '<h4>Aenean vel urna dapibus, tristique neque eget, vehicula.</h4><p><em>Jul 27, 2018</em></p>',
+                    link: 'download pdf'
+                },
+                {
+                    descr: '<h4>Aenean vel urna dapibus, tristique neque eget, vehicula.</h4><p><em>Jul 27, 2018</em></p>',
+                    link: 'download pdf'
+                },
+                {
+                    descr: '<h4>Aenean vel urna dapibus, tristique neque eget, vehicula.</h4><p><em>Jul 27, 2018</em></p>',
+                    link: 'download pdf'
+                },
+                {
+                    descr: '<h4>Aenean vel urna dapibus, tristique neque eget, vehicula.</h4><p><em>Jul 27, 2018</em></p>',
+                    link: 'download pdf'
+                },
+                {
+                    descr: '<h4>Aenean vel urna dapibus, tristique neque eget, vehicula.</h4><p><em>Jul 27, 2018</em></p>',
+                    link: 'download pdf'
+                },
+                {
+                    descr: '<h4>Aenean vel urna dapibus, tristique neque eget, vehicula.</h4><p><em>Jul 27, 2018</em></p>',
+                    link: 'download pdf'
+                },
+                {
+                    descr: '<h4>Aenean vel urna dapibus, tristique neque eget, vehicula.</h4><p><em>Jul 27, 2018</em></p>',
+                    link: 'download pdf'
+                }
+            ]
+        } %}
+
+        {% include "partials/_section-multiboxes.html" %}
+
+        {% include "partials/_section-kits.html" %}
+
+    </main>
+
+    {% include "partials/_footer.html" %}
+
+{% endblock %}

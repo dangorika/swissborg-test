@@ -1,0 +1,41 @@
+.modal
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba($black, .3)
+    display: none
+    z-index: 999
+    .l
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+    &__in
+        position: relative
+        width: 100%
+        height: 0
+        padding-top: 56.25%
+    &__video
+        +coverdiv
+    iframe
+        +coverdiv
+    &__button
+        position: absolute
+        z-index: 5
+        top: 8px
+        right: 8px
+        width: 32px
+        height: 32px
+        &:hover
+            .icon
+                stroke: $green-positive
+    .icon
+        fill: none
+        stroke: $white
+        width: 24px
+        height: 24px
+        transition: stroke .3s $easing-common
+    &.is-active
+        display: block

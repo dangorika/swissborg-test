@@ -1,0 +1,34 @@
+<!-- begin hero -->
+<div class="hero">
+    <div class="l">
+        <div class="hero__in">
+            <div class="hero__info">
+                <div class="hero__logo js-start-reveal">
+                    <img src="img/logo_symbol.svg" alt="" />
+                </div>
+                <div class="hero__text">
+                    <h1 class="js-start-reveal">The New Era</h1>
+                    <h3 class="js-start-reveal">of Crypto Wealth Management.</h3>
+                </div>
+                <a href="" class="hero__button button button_primary button_special js-start-reveal">
+                    {{ mixins.icon('arrow') }}
+                    <span>get to know us</span>
+                </a>
+                <div class="hero__link js-start-reveal">
+                    <a href="#app" class="scroller">
+                        <span>Scroll Down</span>
+                        {{ mixins.icon('scroll-down') }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {% set mountain_group = {
+        width: 1440,
+        height: 900
+    } %}
+    {% include "components/_mountains.html" %}
+</div>
+<!-- end hero -->

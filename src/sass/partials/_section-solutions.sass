@@ -1,0 +1,76 @@
+.solution
+    position: relative
+    // z-index: 1
+    background: $white
+    overflow: visible
+    &__in
+        // padding: 216px 0 64px
+        padding: 60px 0 100px
+        position: relative
+        z-index: 1
+        +r($t-lg)
+            padding: 144px 0 100px
+        +r($m-lg)
+            padding: 42px 0
+
+    &__topbar
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 103px
+        +r($t-lg)
+            align-items: flex-start
+            margin-bottom: 82px
+        +r($m-lg)
+            margin-bottom: 24px
+    &__title
+        +r($t-lg)
+            max-width: 320px
+    &__next
+        margin-top: 7px
+        +r($t-lg)
+            margin-top: 22px
+        +r($m-lg)
+            display: none
+    &__tabs
+        display: flex
+    &__links
+        +r($t-lg)
+            width: 100%
+    &__link
+        max-width: 472px
+        +r($t-lg)
+            max-width: none
+        &:not(:last-child)
+            margin-bottom: 5px
+            +r($m-lg)
+                margin-bottom: 20px
+    &__descriptions
+        position: relative
+        +r($t-lg)
+            display: none
+    &__sticky
+        position: sticky
+        top: 130px
+    .mountains
+        height: 332px
+        top: -332px
+
+.description
+    opacity: 0
+    transform: translateY(-24px)
+    visibility: hidden
+    position: absolute
+    top: 0
+    left: 0
+    transition: opacity .3s $easing-common, transform .3s $easing-common, visibility .3s 0s $easing-common
+    &.is-active
+        opacity: 1
+        transform: translateY(0)
+        visibility: visible
+        transition-delay: .3s
+        position: static
+    &__title
+        margin-bottom: 20px
+    &__text
+        margin-bottom: 70px

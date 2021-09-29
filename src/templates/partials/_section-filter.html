@@ -1,0 +1,44 @@
+<!-- {% set selects = [
+    {
+        options: [
+            {
+                option: 'Uncategorized'
+            },
+            {
+                option: '1'
+            },
+            {
+                option: '2'
+            }
+        ]
+    },
+    {
+        options: [
+            {
+                option: 'London, United Kingdom'
+            },
+            {
+                option: '1'
+            },
+            {
+                option: '2'
+            }
+        ]
+    }
+]
+%}
+ -->
+<!-- begin section -->
+<div class="filters">
+    <div class="l">
+        <div class="filters__in">
+            <h4 class="filters__title">Filter by:</h4>
+            {% for item in selects %}
+            <div class="filters__item">
+                {% include "components/_select.html" %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- end section -->

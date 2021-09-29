@@ -1,0 +1,69 @@
+.select
+    $this: &
+    min-width: 232px
+    +tt-reg
+    font-size: 18px
+    position: relative
+    svg
+        position: absolute
+        top: 23px
+        right: 16px
+        z-index: 2
+        pointer-events: none
+        transition: transform .3s $easing-common
+    path
+        stroke: $grey-light
+        transition: stroke .3s $easing-common
+    &__placeholder
+        min-width: 100%
+        padding: 15px 16px 13px
+        line-height: 1
+        border: 1px solid $light
+        border-radius: 8px
+        background-color: $white
+        transition: border-radius .3s $easing-common, color .3s $easing-common
+        text-align: left
+        +tt-reg
+        font-size: 18px
+        color: $grey-dark
+        cursor: pointer
+        position: relative
+    &__list
+        min-width: 100%
+        padding: 12px 0
+        border: 1px solid $light
+        border-top: 0
+        border-bottom-left-radius: 8px
+        border-bottom-right-radius: 8px
+        background-color: $white
+        position: absolute
+        z-index: 99
+        top: 100%
+        left: 0
+        opacity: 0
+        visibility: hidden
+        transition: opacity .3s $easing-common, visibility .3s 0s
+        li
+            line-height: 1
+            padding: 14px 16px 10px
+            color: $grey-dark
+            background-color: $white
+            transition: background-color .3s $easing-common, color .3s $easing-common
+            cursor: pointer
+            &:hover
+                background-color: $light
+                color: $charcoal
+    &.is-active
+        #{$this}__placeholder
+            border-bottom-left-radius: 0px
+            border-bottom-right-radius: 0px
+        #{$this}__list
+            opacity: 1
+            visibility: visible
+        svg
+            transform: rotate(180deg)
+        path
+            stroke: $green-positive
+    &.is-filled
+        #{$this}__placeholder
+            color: $charcoal

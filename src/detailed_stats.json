@@ -1,0 +1,44 @@
+{
+    "last_updated_at": 1542587101,
+    "portfolios": [
+    {
+        "index": "SB20",
+        "start_date": 1451606400.0,
+        "annual_compounded_return": "307.1",
+        "annual_outperformance": "163.9",
+        "annualized_volatility": "86.5",
+        "sharpe_ratio": "3.55",
+        "sortino_ratio": "89.86",
+        "max_drawdown": "-82.9"
+    },
+    {
+        "index": "SB-NEXT30",
+        "start_date": 1483228800.0,
+        "annual_compounded_return": "353.8",
+        "annual_outperformance": "202.8",
+        "annualized_volatility": "121.1",
+        "sharpe_ratio": "2.92",
+        "sortino_ratio": "79.61",
+        "max_drawdown": "-90.0"
+    },
+    {
+        "index": "TOP20",
+        "start_date": 1451606400.0,
+        "annual_compounded_return": "158.0",
+        "annual_outperformance": "14.8",
+        "annualized_volatility": "76.0",
+        "sharpe_ratio": "2.08",
+        "sortino_ratio": "48.36",
+        "max_drawdown": "-78.3"
+    },
+    {
+        "index": "BTC",
+        "start_date": 1451606400.0,
+        "annual_compounded_return": "143.2",
+        "annual_outperformance": "0",
+        "annualized_volatility": "76.7",
+        "sharpe_ratio": "1.87",
+        "sortino_ratio": "46.66",
+        "max_drawdown": "-71.5"
+    }]
+}

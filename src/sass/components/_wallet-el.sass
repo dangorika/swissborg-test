@@ -1,0 +1,24 @@
+.wallet-el
+    position: relative
+    padding-left: 56px
+    +r($m-lg)
+        padding-left: 52px
+    &__icon
+        position: absolute
+        top: -4px
+        left: 0
+        width: 32px
+        height: 32px
+        img
+            width: 100%
+            display: block
+    &__title
+        +tt-demi
+        color: $black
+        font-size: 24px
+        line-height: 1.08
+        margin: 8px 0 24px 0
+    &__text
+        max-width: 400px
+        +r($t-lg)
+            max-width: 526px

@@ -1,0 +1,75 @@
+{% set logos = [
+    [
+        {
+            url: '',
+            src: 'img/logos/coinidol.png'
+        },
+        {
+            url: '',
+            src: 'img/logos/bloomberg-logo.png'
+        },
+        {
+            url: '',
+            src: 'img/logos/cryptoninjas.png'
+        },
+        {
+            url: '',
+            src: 'img/logos/financemagnates.png'
+        },
+        {
+            url: '',
+            src: 'img/logos/coinidol.png'
+        },
+        {
+            url: '',
+            src: 'img/logos/bloomberg-logo.png'
+        }
+    ],
+    [
+        {
+            url: '',
+            src: 'img/logos/bitcoin.png'
+        },
+        {
+            url: '',
+            src: 'img/logos/hackernoon.png'
+        },
+        {
+            url: '',
+            src: 'img/logos/forbes.png'
+        },
+        {
+            url: '',
+            src: 'img/logos/entrepreneur.png'
+        },
+        {
+            url: '',
+            src: 'img/logos/bitcoin.png'
+        }
+    ]
+] %}
+
+
+<!-- begin section -->
+<section class="section logos js-logos">
+    <div class="l">
+        <div class="logos__in js-section-logos">
+            <h2 class="logos__title title js-reveal">As Seen On</h2>
+            {% for row in logos %}
+            <div class="logos__slider swiper-container js-reveal">
+                <div class="swiper-wrapper">
+                    {% for i in row %}
+                    <div class="logos__slide swiper-slide">
+                        <a href="{{ i.url }}" class="logo-img">
+                            <img src="{{ i.src }}" alt="" class="lazy" />
+                            <img src="{{ i.src }}" alt="" class="lazy" />
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- end section -->

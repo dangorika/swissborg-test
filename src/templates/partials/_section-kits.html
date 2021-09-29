@@ -1,0 +1,42 @@
+{% set kits = [
+    {
+        icon: 'logo',
+        title: 'Logo',
+        text: 'for Print and Web'
+    },
+    {
+        icon: 'headshot',
+        title: 'Headshot',
+        text: 'for Print and Web'
+    },
+    {
+        icon: 'owerview',
+        title: 'Owerview',
+        text: 'for Print and Web'
+    },
+    {
+        icon: 'guidelines',
+        title: 'Guidelines',
+        text: 'for Print and Web'
+    }
+] %}
+
+<!-- begin section -->
+<section class="section kits">
+    <div class="l">
+        <div class="kits__in">
+            <h3 class="kits__title title">Media kit</h3>
+            <div class="kits__text">
+                <p>Media and press professionals may use logos, trademarks, images and colors by referring and adhering to the instructions in the Brand Guidelines document. Images of the leadership team can be downloaded by clicking Headshots.</p>
+            </div>
+            <div class="kits__items">
+                {% for item in kits %}
+                <div class="kits__item">
+                   {% include "../components/_kit.html" %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->

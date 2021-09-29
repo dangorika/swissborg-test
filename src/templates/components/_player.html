@@ -1,0 +1,19 @@
+<!-- begin player -->
+<div class="player">
+    <div class="player__pic">
+        <img src="{{item.img}}" alt="" class="lazy" />
+        {% if item.hover%}
+        <div class="player__hover"><p>{{item.hover}}</p></div>
+        {% endif %}
+    </div>
+    <div class="player__box">
+        <h4>{{ item.name }}</h4>
+        <h5>{{ item.position }}</h5>
+        <div class="player__links">
+            {% for i in item.links %}
+            <a href="#">{{ i | safe }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- end player -->

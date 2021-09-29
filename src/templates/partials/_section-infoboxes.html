@@ -1,0 +1,18 @@
+<!-- begin section -->
+<section class="section infoboxes">
+    <div class="l">
+        <div class="infoboxes__in">
+            {% if infoboxes.title %}
+            <h3 class="infoboxes__title title">{{ infoboxes.title }}</h3>
+            {% endif %}
+            <div class="infoboxes__items">
+                {% for item in infoboxes.list %}
+                <div class="infoboxes__item">
+                   {% include "components/_infobox.html" %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->

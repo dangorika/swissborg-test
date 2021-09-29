@@ -1,0 +1,20 @@
+<div class="infobox{% if item.img_small %} infobox_small{% endif %}">
+    <div class="infobox__icon">
+        {% if item.icon %}
+            {{ mixins.icon(item.icon)}}
+        {% endif %}
+
+        {% if item.img %}
+            <img src="{{item.img}}" alt="" />
+        {% endif %}
+    </div>
+    <div class="infobox__text">
+        {% if item.title %}
+            <h4>{{item.title}}</h4>
+        {% endif %}
+        {% if item.date %}
+            <span>{{item.date}}</span>
+        {% endif %}
+        <p>{{item.descr}}</p>
+    </div>
+</div>

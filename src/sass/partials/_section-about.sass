@@ -1,0 +1,41 @@
+.about
+    position: relative
+    z-index: 2
+    &__in
+        padding: 100px 0 360px
+        +r($t-lg)
+            padding: 75px 0 300px
+        +r($m-lg)
+            padding: 0 0 200px
+    &__title
+        margin-bottom: 100px
+        +r($m-lg)
+            margin-bottom: 48px
+    &__list
+        margin-bottom: 64px
+        +r($t-lg)
+            margin-bottom: 18px
+    &__meta
+        display: flex
+        justify-content: space-between
+        align-items: baseline
+        +r($m-lg)
+            display: block
+    &__link
+        color: $charcoal
+        span
+            margin-right: 10px
+            +r($m-lg)
+                display: block
+                margin-right: 0
+                margin-bottom: 24px
+    &__button
+        +r($m-lg)
+            margin-bottom: 43px
+    &__slider
+        margin-bottom: 64px
+        +r($t-lg)
+            margin-bottom: 18px
+    .player
+        +r($t-lg)
+            max-width: 266px

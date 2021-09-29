@@ -1,0 +1,53 @@
+---
+title: Use Cases
+header_dark: true
+
+hero: [
+    {
+        title: 'Use Cases',
+        titleWhite: true,
+        text: '<p>SwissBorg`s Smart Wallet is a Wealth Management Platform that gives equal investment opportunities to everyone. Thanks to the smart wallet`s slick user interface and its institutional grade infrastructure .</p>'
+    }
+]
+
+infoboxes: {
+    title: 'Uses Areas',
+    list: [
+        {
+            img: 'img/crypto.svg',
+            title: 'Crypto consumers',
+            descr: 'SwissBorg app, Indicies etc. Referendum, Reddit, ICO competition'
+        },
+        {
+            img: 'img/exchanges.svg',
+            title: 'Exchanges',
+            descr: 'Liquidity provider with OMS - 1- 2 short descriptive sentences'
+        },
+        {
+            img: 'img/dao-s.svg',
+            title: 'DAO’s',
+            descr: 'Managed accounts & treasury/ICO/',
+        }
+    ]
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    {% include "partials/_header.html" %}
+
+    <main class="main use-cases">
+
+        {% for item in hero %}
+            {% include "partials/_page-hero.html" %}
+        {% endfor %}
+
+        {% include "partials/_section-infoboxes.html" %}
+        {% include "partials/_section-studies.html" %}
+
+    </main>
+
+    {% include "partials/_footer.html" %}
+
+{% endblock %}

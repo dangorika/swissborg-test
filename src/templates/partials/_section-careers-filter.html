@@ -1,0 +1,37 @@
+<!-- begin section -->
+<section class="section careers-filter">
+    <div class="l">
+        <div class="careers-filter__in">
+            <!-- begin filters -->
+            <div class="filters">
+                <div class="filters__in">
+                    <h4 class="filters__title">Filter by:</h4>
+                    {% for item in careers_filter %}
+                    <div class="filters__item">
+                        {% include "components/_select.html" %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- end filters -->
+            <div class="careers-filter__results">
+                {% for item in careers_results %}
+                <div class="result-box" data-tag="{{ item.tag }}">
+                    <h3 class="result-box__title title">{{ item.tag }}</h3>
+                    <div class="result-box__list">
+                        {% for item in item.list %}
+                        <div class="result-box__item" data-location="{{ item.location }}">
+                            <a href="#" class="result">
+                                <h4 class="result__title">{{ item.title }}</h4>
+                                <p class="result__text">{{ item.location }}</p>
+                            </a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->

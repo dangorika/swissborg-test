@@ -1,0 +1,76 @@
+{% set articles = [
+    {
+        date: 'Sep 21',
+        title: 'Meet Carlos Cabrera: SwissBorg’s Business Developer in Toronto',
+        text: 'Meet Carlos Cabrera: SwissBorg’s Business Developer in Toronto',
+        image: 'img/article.jpg',
+        tags: [
+            {
+                text: 'ICO Chronicles'
+            }
+        ]
+    },
+    {
+        date: 'Sep 21',
+        title: 'SwissBorg Partners with Japan’s Ginco',
+        text: 'Meet Carlos Cabrera: SwissBorg’s Business Developer in Toronto',
+        tags: [
+            {
+                text: 'ICO Chronicles'
+            }
+        ]
+    },
+    {
+        date: 'Sep 21',
+        title: 'Swarm Intelligence in action — SwissBorg’s Community Committee',
+        text: 'Meet Carlos Cabrera: SwissBorg’s Business Developer in Toronto',
+        image: 'img/article.jpg',
+        tags: [
+            {
+                text: 'Crypto Quant Insight',
+                active: true
+            }
+        ]
+    },
+    {
+        date: 'Sep 21',
+        title: 'SwissBorg Crypto Indices Are Live!',
+        text: 'Meet Carlos Cabrera: SwissBorg’s Business Developer in Toronto',
+        tags: [
+            {
+                text: 'Crypto Quant Insight'
+            }
+        ]
+    }
+] %}
+
+
+<!-- begin section -->
+<section class="section articles">
+    <div class="l">
+        <div class="articles__in">
+            <div class="articles__items">
+                <div class="articles__items-in js-simple-articles js-readmore" data-row-visible="3" data-more-btn="show more" data-less-btn="show less" data-btn-link="true">
+                    {% for item in articles %}
+                    <!-- <div class="articles__item"> -->
+                        {% include "components/_article-box.html" %}
+                    <!-- </div> -->
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="articles__podcasts podcasts">
+                <h3 class="podcasts__title title">Latest podcasts</h3>
+                <div class="podcasts__list">
+                    {% for item in podcasts %}
+                        <div class="podcasts__item">
+                            {% include "components/_podcast.html" %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- end section -->

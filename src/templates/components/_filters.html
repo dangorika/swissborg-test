@@ -1,0 +1,15 @@
+<!-- begin section -->
+<div class="filters">
+    <div class="filters__in">
+        <h4 class="filters__title">{{ item.title }}</h4>
+        {% for item in item.selects %}
+        <div class="filters__item">
+            {% include "components/_select.html" %}
+        </div>
+        {% endfor %}
+        {% if item.searchtool %}
+        <button class="filters__search button js-blog-search">{{ mixins.icon('search') }}</button>
+        {% endif %}
+    </div>
+</div>
+<!-- end section -->

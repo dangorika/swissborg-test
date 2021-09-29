@@ -1,0 +1,37 @@
+{% set benefits = [
+    {
+        text: 'First, the CHSB holders will benefit by being able to diversify their portfolio of crypto-assets by receiving additional tokens from quality projects by simply taking part.'
+    },
+    {
+        text: 'Second, the DAO`s will get all the necessary technology/ legal/ marketing and financial support for pre-ICO, ICO to post-ICO services. On top of our competitive rates, our ICO.'
+    },
+    {
+        text: 'Swissborg, as a company, has built has a recurring revenue stream to keep further grow the wealth management platform of the future and help accelerate strategic partnerships.'
+    }
+]%}
+
+<!-- begin section -->
+<section class="section benefits">
+    <div class="l">
+        <div class="benefits__in swiper-container js-benefits">
+            <div class="benefits__items swiper-wrapper">
+                {% for item in benefits %}
+                <div class="benefits__item swiper-slide">
+                    <div class="benefits__text">{{ item.text | safe }}</div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="benefits__controls">
+                <button class="button control js-benefits-prev">
+                    {{ mixins.icon('arrow-prev') }}
+                    <span class="control__text">Prev</span>
+                </button>
+                <button class="button control js-benefits-next">
+                    <span class="control__text">Next</span>
+                    {{ mixins.icon('arrow-next') }}
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->

@@ -1,0 +1,30 @@
+<!-- begin page-hero -->
+<div class="page-hero">
+    <div class="l">
+        <div class="page-hero__in">
+            <div class="page-hero__head">
+                <h2 class="page-hero__title title{% if item.titleWhite %} title_white{% endif %}">{{ item.title }}</h2>
+
+                {% if item.filters %}
+                    {% for item in item.filters %}
+                        {% include "components/_filters.html" %}
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+            {% if item.text %}
+            <div class="page-hero__text text">
+                {{ item.text | safe }}
+            </div>
+            {% endif %}
+
+        </div>
+    </div>
+
+    {% set mountain_group = {
+        width: 1440,
+        height: 284
+    } %}
+    {% include "components/_mountains.html" %}
+</div>
+<!-- end page-hero -->

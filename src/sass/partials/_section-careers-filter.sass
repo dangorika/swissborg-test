@@ -1,0 +1,36 @@
+.careers-filter
+    padding: 44px 0
+    .filters
+        +r($m-lg)
+            display: block
+        &__item
+            +r($m-lg)
+                margin-bottom: 12px
+    &__in
+        padding-bottom: 36px
+
+        +r($t-lg)
+            padding-bottom: 56px
+        &_no-border
+            padding-bottom: 0
+            border-bottom: none
+.result-box
+    padding: 80px 0 52px
+    &:not(:last-child)
+        border-bottom: 1px solid $light
+    &__title
+        margin-bottom: 48px
+    &__list
+        display: flex
+        flex-wrap: wrap
+    &__item
+        width: 30%
+        margin-bottom: 50px
+        +r($t-lg)
+            width: 33.33%
+        +r($m-lg)
+            width: 100%
+    &:last-child
+        padding-bottom: 80px
+
+

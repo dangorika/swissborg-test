@@ -1,0 +1,14 @@
+<div class="multibox">
+    {% if item.img %}
+    <div class="multibox__icon">
+        <img src="{{ item.img }}" alt="" />
+    </div>
+    {% endif %}
+    <div class="multibox__text">{{ item.descr | safe }}</div>
+
+    {% if item.link %}
+    <div class="multibox__link">
+        <a href="#" class="link link_next">{{ item.link }}</a>
+    </div>
+    {% endif %}
+</div>

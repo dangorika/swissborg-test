@@ -1,0 +1,37 @@
+body
+    background: $white
+    +smooth-font
+    +tt-reg
+    font-size: 20px
+    line-height: 1.4
+    color: $grey-dark
+    &.is-modal-open
+        overflow: hidden
+        position: fixed
+        width: 100%
+
+.logo
+    width: 180px
+    height: 32px
+    display: flex
+    align-items: center
+    +r($m-lg)
+        width: 113px
+        height: 19px
+    img
+        width: 100%
+        display: block
+
+.main
+    display: block
+
+.section
+    overflow: hidden
+
+.reveal
+    opacity: 0
+.js-reveal
+    opacity: 0
+
+.fb_iframe_widget span
+    vertical-align: top !important

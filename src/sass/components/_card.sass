@@ -1,0 +1,31 @@
+.card
+    display: block
+    overflow: hidden
+    border-radius: 8px
+    box-shadow: 0px 4px 40px rgba(25, 30, 41, 0.06)
+    transition: transform .3s $easing-common, box-shadow .3s $easing-common
+    &:hover
+        box-shadow: 0px 4px 40px rgba(25, 30, 41, 0.2)
+        transform: translateY(-6px)
+    &__content
+        padding: 38px 40px
+        +r($m-lg)
+            padding: 38px 24px
+    &__image
+        display: flex
+        img
+            width: 100%
+            object-fit: cover
+            font-family: 'object-fit: cover;'
+    &__tag
+        margin-bottom: 18px
+    &__subtitle
+        +tt-demi
+        font-weight: normal
+        margin-bottom: 20px
+        font-size: 24px
+    &__title
+        margin-bottom: 22px
+        font-size: 40px
+        font-weight: 700
+        color: $black

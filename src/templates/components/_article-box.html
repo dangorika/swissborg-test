@@ -1,0 +1,25 @@
+<!-- begin article -->
+<a href="" class="article-box{%if item.main%} article-box_main{%endif%}{%if item.small%} article-box_small{%endif%} js-article-box">
+    <span class="article-box__wrap">
+        <span class="article-box__meta">
+            {% for tag in item.tags %}
+            <span class="article-box__tag tag{%if item.main%} tag_light{%endif%}{%if tag.active%} tag_green{%endif%}">{{ tag.text }}</span>
+            {% endfor %}
+            <span class="article-box__date">
+                <span>{{ item.date }}</span>
+                -
+                <span>3 min read</span>
+            </span>
+        </span>
+        <span class="article-box__text">
+            <h4>{{ item.title }}</h4>
+            <p>{{ item.text }}</p>
+        </span>
+    </span>
+    {% if not item.small and item.image %}
+    <span class="article-box__pic">
+        <img src="{{ item.image }}" alt="" />
+    </span>
+    {% endif %}
+</a>
+<!-- end article -->

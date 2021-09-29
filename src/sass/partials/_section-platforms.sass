@@ -1,0 +1,60 @@
+.platforms
+    margin-bottom: 82px
+    +r($t-lg)
+        margin-bottom: 144px
+    +r($m-lg)
+        margin-bottom: 54px
+    &__title
+        margin-bottom: 44px
+        +r($t-lg)
+            margin-bottom: 48px
+    &__boxes
+        display: flex
+        +r($t-lg)
+            flex-direction: column
+    &__item
+        padding-bottom: 24px
+        margin-bottom: 24px
+        border-bottom: 1px solid $light
+        +r($t-lg)
+            padding-bottom: 28px
+            margin-bottom: 22px
+        &:last-child
+            padding-bottom: 0
+            margin-bottom: 0
+            border: none
+
+        h4
+            +tt-demi
+            font-size: 24px
+            line-height: 1.08
+            color: $black
+            margin-bottom: 24px
+
+        ul li
+            margin-bottom: 14px
+            +r($t-lg)
+                max-width: 572px
+            div
+                color: $black
+        p
+            +r($t-lg)
+                max-width: 572px
+    &__info
+        +r($t-lg)
+            order: 1
+    &__pic
+        img
+            max-width: 100%
+            display: block
+            margin: 0 auto
+        +r($t-lg)
+            order: 0
+            text-align: center
+            margin-bottom: 54px
+        +r($m-lg)
+            min-width: calc(100% + 30px)
+            position: relative
+            left: -15px
+
+

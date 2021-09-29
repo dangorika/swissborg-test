@@ -1,0 +1,119 @@
+.article-box
+    $this: &
+    position: relative
+    display: flex
+    height: 100%
+    &:not(.article-box_main)
+        +r($m-lg)
+            flex-direction: column
+        #{$this}__meta
+            +r($m-lg)
+                flex-direction: row
+        #{$this}__tag
+            +r($m-lg)
+                margin-right: 20px
+                margin-bottom: 0
+    &:hover
+        #{$this}__text
+            opacity: .5
+        #{$this}__pic img
+            transform: scale(1.05)
+    &__meta
+        display: flex
+        align-items: baseline
+        margin-bottom: 10px
+        +r($t-lg)
+            margin-bottom: 14px
+            flex-direction: column
+    &__tag
+        margin-right: 24px
+        +r($t-lg)
+            margin-bottom: 10px
+
+    &__date
+        font-size: 16px
+        color: $grey-light
+    &__text
+        display: block
+        transition: opacity .3s $easing-common
+        h4
+            +tt-demi
+            font-size: 40px
+            line-height: 1.05
+            color: $black
+            +r($m-lg)
+                font-size: 24px
+        p
+            margin-top: 10px
+            font-size: 20px
+            color: $grey-light
+
+    &__pic
+        overflow: hidden
+        min-width: 264px
+        width: 264px
+        min-height: 234px
+        height: 234px
+        margin-left: 90px
+        border-radius: 8px
+        display: block
+        background: $black
+        +r($t-lg)
+            margin-left: 40px
+        +r($m-lg)
+            order: 0
+            margin: 0 0 24px 0
+            width: 100%
+            min-height: 186px
+            height: 186px
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            font-family: 'object-fit: cover;'
+            transition: transform .5s $easing-common, background-position .5s $easing-common
+    &__wrap
+        position: relative
+        z-index: 1
+        display: block
+        align-self: flex-end
+        +r($m-lg)
+            order: 1
+            align-self: flex-start
+    &_main
+        padding: 26px 40px
+        min-height: 483px
+        +r($t-lg)
+            margin-bottom: 60px
+        +r($m-lg)
+            padding: 22px 8px 30px 26px
+        #{$this}__wrap
+            +r($m-lg)
+                align-self: stretch
+                display: flex
+                flex-direction: column
+        #{$this}__text
+            +r($m-lg)
+                flex-grow: 1
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+            h4
+                color: $white
+            p
+                color: $light
+        #{$this}__date
+            color: $light
+        #{$this}__pic
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+            margin-left: 0
+    &_small
+        #{$this}__text
+            h4
+                font-size: 24px
+

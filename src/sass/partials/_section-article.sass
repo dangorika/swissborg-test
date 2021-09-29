@@ -1,0 +1,124 @@
+.article
+    $this: &
+    font-size: 20px
+    &__in
+        padding-bottom: 80px
+    &__content
+        max-width: 784px
+        margin: 0 auto
+        h4
+            position: relative
+            padding-left: 34px
+            margin-bottom: 48px
+            +tt-demi
+            font-size: 24px
+            line-height: 1.05
+            color: $black
+            &:before
+                position: absolute
+                left: 0
+                top: -2px
+                content: ''
+                width: 2px
+                height: 100%
+                background-color: $green-positive
+        p
+            margin-bottom: 48px
+        img
+            display: block
+            width: 100%
+            max-width: 672px
+            margin: 0 auto 48px
+        ol
+            margin-bottom: 48px
+            list-style-type: decimal
+            li
+                padding-left: 5px
+                margin-left: 13px
+                margin-bottom: 12px
+        ul
+            margin-bottom: 48px
+            li
+                position: relative
+                padding-left: 12px
+                &:before
+                    content: ''
+                    position: absolute
+                    top: 14px
+                    left: 4px
+                    width: 4px
+                    height: 1px
+                    background-color: $black
+    &__btn-back
+        margin-bottom: 46px
+    &__meta
+        display: flex
+        align-items: baseline
+        margin-bottom: 18px
+        +r($m-lg)
+            display: block
+    &__date
+        margin-top: 2px
+        font-size: 16px
+        color: $grey-light
+    &__tag
+        margin-right: 24px
+        +r($m-lg)
+            margin-bottom: 12px
+    &__title
+        &.title
+            +r($m-lg)
+                font-size: 32px
+    &__subtitle
+        margin-bottom: 54px
+        color: $black
+    // &__respect
+    //     max-width: 784px
+    //     margin: 0 auto
+    &__heading
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 12px
+        +r($m-lg)
+            display: block
+    &__button
+        +r($m-lg)
+            margin-top: 18px
+    &__img
+        width: 100%
+        height: 352px
+        border-radius: 8px
+        overflow: hidden
+        margin-bottom: 42px
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            font-family: 'object-fit: cover;'
+            max-width: none
+    &_secondary
+        font-size: 16px
+        color: $black
+        #{$this}__heading
+            margin-bottom: 24px
+        #{$this}__in
+            padding-bottom: 0
+            margin-bottom: 180px
+            border-bottom: none
+
+        #{$this}__content
+            margin: 0 auto
+            padding-bottom: 0
+            border-bottom: none
+
+        h4
+            padding-left: 0
+            &:before
+                display: none
+        ul,ol,p
+            +open-sans
+            line-height: 1.75
+
+
+

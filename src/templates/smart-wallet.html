@@ -1,0 +1,50 @@
+---
+title: Smart Wallet
+header_dark: true
+
+numbers_triple: true
+
+hero: [
+    {
+        title: 'Smart Wallet',
+        titleWhite: true,
+        text: '<p>SwissBorg provides investors with a transparent, diversified and unbiased source of performance through indexed and advanced investment strategies.</p>'
+    }
+]
+
+numbers:
+    triple: true
+    title: Hard Facts & Figures
+    list:
+        -
+            figure: '01'
+            text: multi-strategy hedge fund
+        -
+            figure: '03'
+            text: SB indices with track records
+        -
+            figure: '05'
+            text: exchenge connectors
+
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    {% include "partials/_header.html" %}
+
+    <main class="main smart-wallet">
+
+        {% for item in hero %}
+            {% include "partials/_page-hero.html" %}
+        {% endfor %}
+
+        {% include "partials/_section-numbers.html" %}
+
+        {% include "partials/_section-wallet.html" %}
+
+    </main>
+
+    {% include "partials/_footer.html" %}
+
+{% endblock %}

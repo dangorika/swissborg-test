@@ -1,0 +1,82 @@
+{% set app = {
+    title: 'Crypto Wealth Management App',
+    text: '<p>We are the first wealth management platform for crypto based on the blockchain, made in Switzerland by a team of financial experts. Our first products are referendum, ICO platform and smart wallet.</p>',
+    links: [
+        {
+            url: '',
+            icon: 'app-store'
+        },
+        {
+            url: '',
+            icon: 'google-play'
+        }
+    ]
+} %}
+
+{% set phone = {
+    frame: 'img/phone_frame.svg',
+    shape: 'img/phone_shape.svg',
+    img_top: 'img/phone_top.png',
+    img_bottom: 'img/phone_bottom.png'
+} %}
+
+<!-- begin section -->
+<section class="section app" id="app">
+    <div class="l">
+        <div class="app__in">
+            <div class="app__info l-col">
+                <h2 class="app__title title js-reveal">{{ app.title | safe }}</h2>
+                <div class="app__text js-reveal">{{ app.text | safe }}</div>
+                <div class="app__links">
+                    {% for l in app.links %}
+                    <div class="app__link js-reveal">
+                        <!-- begin app-link -->
+                        <a href="{{ l.url }}" class="app-link">
+                            {{ mixins.icon(l.icon) }}
+                        </a>
+                        <!-- end app-link -->
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="app__pic l-col js-reveal">
+                {#{% include "components/_phone.html" %}#}
+                <div class="app__logo">
+                    <img src="img/logo_symbol.svg" alt="">
+                </div>
+            </div>
+
+            <div class="app__links app__links_mob">
+                {% for l in app.links %}
+                <div class="app__link js-reveal">
+                    <!-- begin app-link -->
+                    <a href="{{ l.url }}" class="app-link">
+                        {{ mixins.icon(l.icon) }}
+                    </a>
+                    <!-- end app-link -->
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+
+
+<!--     {% set mountain_group = {
+        name: 'mountain_group_2',
+        width: 1440,
+        height: 600
+    } %}
+    {% include "components/_mountains.html" %} -->
+
+<!--     <div class="clip-rect js-clip-rect">
+        {% set mountain_group = {
+            name: 'mountain_group_5',
+            width: 1440,
+            height: 600
+        } %}
+        {% include "components/_mountains.html" %}
+    </div> -->
+</section>
+<!-- end section -->

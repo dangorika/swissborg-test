@@ -1,0 +1,33 @@
+<footer class="footer">
+    {% if footer_extended %}
+    {% include "partials/_section-contact.html" %}
+    {% else %}
+    <div class="footer__waves">
+        <div class="footer__wave" style="background-image: url(img/waves/wave_footer.svg)"></div>
+    </div>
+    {% endif %}
+    <div class="l">
+        <div class="footer__in">
+            <div class="footer__top">
+                <div class="footer__col footer__col_l">
+                    <h2 class="title title_white">Stay updated</h2>
+                </div>
+                <div class="footer__col footer__col_r">
+                    {% include "components/_subform.html" %}
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__col footer__col_l">
+                    {% include "components/_socials.html" %}
+                    <div class="footer__links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms and Condition</a>
+                    </div>
+                </div>
+                <div class="footer__col footer__col_r">
+                    {% include "components/_sitemap.html" %}
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

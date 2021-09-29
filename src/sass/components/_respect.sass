@@ -1,0 +1,46 @@
+.respect
+    padding-bottom: 72px
+    &__in
+        max-width: 784px
+        margin: 0 auto
+        border-top: 1px solid $light
+        padding-top: 32px
+    &__title
+        +tt-demi
+        font-size: 24px
+        line-height: 1.05
+        color: $black
+        i, em
+            color: $green-positive
+            font-style: normal
+    &__text
+        margin-bottom: 24px
+        font-size: 16px
+    &__box
+        display: flex
+        justify-content: space-between
+        align-items: center
+        +r($m-lg)
+            display: block
+    &__likes
+        display: flex
+        align-items: center
+        +r($m-lg)
+            margin-bottom: 16px
+        &-count
+            font-size: 16px
+
+    &__socials
+        display: flex
+        align-items: center
+        .socials__title
+            margin: 0 20px 0 0
+            +tt-reg
+            font-size: 16px
+    &__icon
+        margin-right: 8px
+    .social
+        margin-bottom: 0
+        margin-right: 20px
+        &:last-child
+            margin-right: 0

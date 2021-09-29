@@ -1,0 +1,21 @@
+.kits
+    padding: 40px 0 80px
+    &__title
+        margin-bottom: 40px
+    &__text
+        max-width: 576px
+        margin-bottom: 48px
+        +r($m-lg)
+            max-width: 480px
+    &__items
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+    &__item
+        width: percentage(240/1200)
+        margin-bottom: 10px
+        +r($t-lg)
+            width: percentage(335/710)
+            margin-bottom: 41px
+        +r($m-lg)
+            width: 100%

@@ -1,0 +1,27 @@
+{% set blocks = [
+    {
+        title: 'SwissBorg Large Cap Index',
+        text: 'The SwissBorg 20 Index tracks the performance of the Top 20 Cryptoassets weighted by market capitalization and capped at 20% per component. USD Tether and any other stablecoins are excluded from the calculation. The weights are recalculated and adjusted every 20 days.'
+    },
+    {
+        title: 'SwissBorg Next 30',
+        text: 'The SwissBorg 30 Index is representative of smaller capitalization Cryptoassets. It tracks the performance of the Top 30 Cryptoassets after the Top 20, weighted by market capitalization and capped at 5% per component. USD Tether and any other stablecoins are excluded from the calculation. The weights are recalculated and adjusted every 20 days.'
+    }
+]%}
+
+<!-- begin section -->
+<section class="section blocks">
+    <div class="l">
+        <div class="blocks__in">
+            <div class="blocks__elements">
+                {% for item in blocks %}
+                <div class="blocks__el l-col">
+                    <h3 class="blocks__title title">{{item.title}}</h3>
+                    <p class="blocks__text">{{item.text}}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->

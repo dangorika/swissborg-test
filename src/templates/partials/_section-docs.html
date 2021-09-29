@@ -1,0 +1,59 @@
+{% for i in docs %}
+<section class="section docs">
+    <div class="l">
+        <div class="docs__in{%if i.special%} docs__in_special{%endif%}">
+            <h3 class="docs__title title">{{ i.title | safe }}</h3>
+
+            {% if i.text %}
+            <div class="docs__text">
+                {{ i.text | safe }}
+            </div>
+            {% endif %}
+
+            {% if i.texts %}
+            <div class="docs__block">
+                {% for d in i.texts %}
+                <div class="docs__item">
+                    <div class="doc-txt">
+                        <h4 class="doc-txt__title docs__subtitle">{{ d.title | safe }}</h4>
+                        {% for l in d.links %}
+                        <a href="" class="doc-txt__link">{{ l | safe }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            {% if i.videos %}
+            {% if i.subtitle %}
+            <h4 class="docs__subtitle">{{ i.subtitle | safe }}</h4>
+            {% endif %}
+            <div class="docs__block js-readmore" data-row-visible="2" data-tablet-row-visible="3" data-more-btn="View more" data-less-btn="View less">
+                {% for d in i.videos %}
+                <div class="docs__item docs__item_video">
+                    <div class="doc-video{%if i.special%} doc-video_special{%endif%}">
+                        <div class="doc-video__poster" data-modal="{{ d.modal }}" data-src="{{ d.video }}">
+                            <div class="doc-video__img" style="background-image: url({{ d.poster }})"></div>
+                            <button class="doc-video__button button">{{ mixins.icon('play') }}</button>
+                        </div>
+                        <div class="doc-video__text">{{ d.text | safe }}</div>
+                        <div class="doc-video__date">{{ d.date | safe }}</div>
+                    </div>
+                    <div class="modal" data-target-modal="{{ d.modal }}">
+                        <div class="l">
+                            <div class="modal__in">
+                                <button class="modal__button button js-modal-close">{{ mixins.icon('close') }}</button>
+                                <div class="modal__video"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+        </div>
+    </div>
+</section>
+{% endfor %}

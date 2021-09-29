@@ -1,0 +1,120 @@
+.docs
+    $this: &
+    padding: 50px 0 70px
+    margin-bottom: 46px
+    border-bottom: 1px solid $light
+    &:last-child
+        border-bottom: none
+    &__in
+        & > .button
+            position: relative
+            top: -30px
+        &_special
+            .docs__title
+                margin-bottom: 24px
+    &__title
+        margin-bottom: 48px
+    &__block
+        margin-bottom: 34px
+        margin-left: -24px
+        margin-right: -24px
+        display: flex
+        flex-wrap: wrap
+        overflow: hidden
+    &__item
+        margin-bottom: 48px
+        padding: 0 24px
+        width: 33.33%
+        +r($m-lg)
+            width: 100%
+        &_video
+            +r($t-lg)
+                width: 50%
+    &__subtitle
+        +tt-demi
+        font-weight: normal
+        font-size: 24px
+        line-height: 1.08
+        color: $charcoal
+        margin-bottom: 27px
+    &__text
+        margin-bottom: 84px
+
+.doc-txt
+    &__title
+        margin-bottom: 12px
+    &__link
+        text-decoration: underline
+        display: block
+        transition: opacity .3s $easing-common
+        &:hover
+            opacity: .5
+.doc-video
+    $this: &
+    &__poster
+        cursor: pointer
+        width: 100%
+        height: 209px
+        // height: auto
+        // padding-top: 56.25%
+        position: relative
+        border-radius: 8px
+        overflow: hidden
+        margin-bottom: 24px
+        &:before
+            content: ""
+            +coverdiv
+            background: $green-positive
+            // z-index: 2
+            opacity: 1
+        &:hover
+            #{$this}__button
+                background-color: $white
+            .icon
+                stroke: $green-positive
+    &__img
+        +coverdiv
+        +cover
+        mix-blend-mode: darken
+        z-index: 1
+    &__text
+        color: $charcoal
+        margin-bottom: 8px
+        max-width: 315px
+    &__date
+        font-size: 16px
+        line-height: 1.125
+    &__button
+        border-radius: 50%
+        width: 60px
+        height: 60px
+        +vcenter
+        z-index: 5
+        background-color: rgba($white, .3)
+        transition: background-color .3s $easing-common
+    .icon
+        display: block
+        margin: 0 auto
+        width: 24px
+        height: 24px
+        stroke: $white
+        fill: none
+        position: relative
+        left: 2px
+        top: 1px
+        transition: stroke .3s $easing-common
+    &_special
+        #{$this}__poster
+            &:before
+                background-color: $blue-information
+            &:hover
+                .icon
+                    stroke: $blue-information
+
+body
+    &.is-ie
+        .doc-video
+            &__poster
+                &:before
+                    z-index: 2
+                    opacity: .6

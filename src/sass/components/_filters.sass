@@ -1,0 +1,30 @@
+.filters
+    &__in
+        display: flex
+        align-items: center
+        +r($m-lg)
+            flex-wrap: wrap
+    &__title
+        margin: 1px 10px 0 0
+        font-size: 18px
+        +tt-reg
+        font-weight: 400
+        +r($m-lg)
+            width: 100%
+            margin-bottom: 10px
+    &__item
+        margin-right: 36px
+        +r($m-lg)
+            margin-right: 24px
+    &__search
+        width: 32px
+        height: 32px
+        margin: 2px 0 0 0
+        .icon
+            width: 24px
+            height: 24px
+            stroke: $grey-light
+            fill: none
+            transition: opacity .3s $easing-common
+            &:hover
+                opacity: .5

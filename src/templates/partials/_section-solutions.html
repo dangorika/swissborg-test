@@ -1,0 +1,92 @@
+{% set solutions = [
+    {
+        url: '',
+        img: 'img/triangle.svg',
+        text: '<h4>Milti-Strategy Hedge Fund</h4><p>A Hedge Fund architecture offers a more robust and dynamic leeway of management while keeping our constant rigorous and transparent philosophy.</p>',
+        title: 'The Cryptallion token<br />Hedge Fund',
+        description: '<p>Our Team has extensive experience in alternative investment strategies used by Hedge Funds. These strategies look for edges (Alpha) to outperform the market. We apply the same approaches when investing in cryptocurrencies. A Hedge Fund architecture offers a more robust and dynamic leeway of management while keeping our constant rigorous and transparent philosophy. Subject to stringent rules, Absolute Return Hedge Funds like the Cryptallion aim to provide a higher level of investment safety and capital preservation by investing in a diversified set of strategies and frequently hedging market risk.</p>',
+        button_text: 'learn more',
+        button_url: '',
+        active: true,
+        tab: 'tab_1'
+    },
+    {
+        url: '',
+        img: 'img/rectangle.svg',
+        text: '<h4>Blockchain Unchained</h4><p>The Blockchain Unchained conference, powered by SwissBorg held in Geneva on September 12th, was one of those action-packed events that engage the mind and lift the spirit.</p>',
+        title: 'The Cryptallion token<br />Hedge Fund',
+        description: '<p>Our Team has extensive experience in alternative investment strategies used by Hedge Funds. These strategies look for edges (Alpha) to outperform the market. We apply the same approaches when investing in cryptocurrencies. A Hedge Fund architecture offers a more robust and dynamic leeway of management while keeping our constant rigorous and transparent philosophy. Subject to stringent rules, Absolute Return Hedge Funds like the Cryptallion aim to provide a higher level of investment safety and capital preservation by investing in a diversified set of strategies and frequently hedging market risk.</p>',
+        button_text: 'learn more',
+        button_url: '',
+        tab: 'tab_2'
+    },
+    {
+        url: '',
+        img: 'img/octagon.svg',
+        text: '<h4>Cripto Indexes</h4><p>SwissBorg provides investors with a transparent, diversified and unbiased source of performance through indexed and advanced investment strategies.</p>',
+        title: 'The Cryptallion token<br />Hedge Fund',
+        description: '<p>Our Team has extensive experience in alternative investment strategies used by Hedge Funds. These strategies look for edges (Alpha) to outperform the market. We apply the same approaches when investing in cryptocurrencies. A Hedge Fund architecture offers a more robust and dynamic leeway of management while keeping our constant rigorous and transparent philosophy. Subject to stringent rules, Absolute Return Hedge Funds like the Cryptallion aim to provide a higher level of investment safety and capital preservation by investing in a diversified set of strategies and frequently hedging market risk.</p>',
+        button_text: 'learn more',
+        button_url: '',
+        tab: 'tab_3'
+    },
+    {
+        url: '',
+        img: 'img/circle.svg',
+        text: '<h4>Smart Wallet</h4><p>There are several types of wallets that provide different ways to store and access your digital currency. Wallets can be broken down into three distinct categories.</p>',
+        title: 'The Cryptallion token<br />Hedge Fund',
+        description: '<p>Our Team has extensive experience in alternative investment strategies used by Hedge Funds. These strategies look for edges (Alpha) to outperform the market. We apply the same approaches when investing in cryptocurrencies. A Hedge Fund architecture offers a more robust and dynamic leeway of management while keeping our constant rigorous and transparent philosophy. Subject to stringent rules, Absolute Return Hedge Funds like the Cryptallion aim to provide a higher level of investment safety and capital preservation by investing in a diversified set of strategies and frequently hedging market risk.</p>',
+        button_text: 'learn more',
+        button_url: '',
+        tab: 'tab_4'
+    },
+    {
+        url: '',
+        img: 'img/rhombus.svg',
+        text: '<h4>ISO Platform</h4><p>A Hedge Fund architecture offers a more robust and dynamic leeway of management while keeping our constant rigorous and transparent philosophy.</p>',
+        title: 'The Cryptallion token<br />Hedge Fund',
+        description: '<p>Our Team has extensive experience in alternative investment strategies used by Hedge Funds. These strategies look for edges (Alpha) to outperform the market. We apply the same approaches when investing in cryptocurrencies. A Hedge Fund architecture offers a more robust and dynamic leeway of management while keeping our constant rigorous and transparent philosophy. Subject to stringent rules, Absolute Return Hedge Funds like the Cryptallion aim to provide a higher level of investment safety and capital preservation by investing in a diversified set of strategies and frequently hedging market risk.</p>',
+        button_text: 'learn more',
+        button_url: '',
+        tab: 'tab_5'
+    }
+] %}
+
+<!-- begin section -->
+<section class="section solution" id="solutions">
+    <div class="l">
+        <div class="solution__in js-section-solutions">
+            <div class="solution__topbar js-reveal">
+                <h2 class="solution__title title">Swissborg Solutions</h2>
+                <a href="" class="solution__next link link_next">learn more</a>
+            </div>
+            <div class="solution__tabs">
+                <div class="solution__links l-col js-reveal">
+                    {% for s in solutions %}
+                    <div class="solution__link">
+                        {% include "components/_tab.html" %}
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="solution__descriptions l-col js-reveal">
+                    <div class="solution__sticky">
+                        {% for s in solutions %}
+                        <div class="description{%if s.active%} is-active{%endif%}" data-target-tab="{{ s.tab }}">
+                            <h3 class="description__title title">{{ s.title | safe }}</h3>
+                            <div class="description__text">{{ s.description | safe }}</div>
+                            <a href="{{ s.button_url }}" class="button button_primary">{{ s.button_text }}</a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--     {% set mountain_group = {
+        name: 'mountain_group_3',
+        width: 1440,
+        height: 332
+    } %}
+    {% include "components/_mountains.html" %} -->
+</section>
+<!-- end section -->

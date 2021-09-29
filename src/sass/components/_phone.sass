@@ -1,0 +1,78 @@
+.phone
+    width: 308px
+    height: 608px
+    display: block
+    margin: 0 auto
+    position: relative
+    +r($m-lg)
+        width: 228px
+        height: 450px
+    &__frame
+        +coverdiv
+        background-repeat: no-repeat
+        background-position: 50% 50%
+        background-size: contain
+        z-index: 1
+    &__top
+        width: 266px
+        height: 133px
+        background-repeat: no-repeat
+        background-position: 50% 100%
+        background-size: contain
+        position: absolute
+        top: 0
+        left: 21px
+        padding-top: 68px
+        background-color: #fbfdfd
+        +r($m-lg)
+            width: 194px
+            left: 17px
+            padding-top: 46px
+    &__bottom
+        width: 266px
+        height: 301px
+        background-repeat: no-repeat
+        background-position: 50% 100%
+        background-size: contain
+        position: absolute
+        bottom: 18px
+        left: 21px
+        +r($m-lg)
+            width: 194px
+            left: 17px
+            bottom: 13px
+    &__shape
+        width: 266px
+        height: 159px
+        background-repeat: no-repeat
+        background-position: 50% 100%
+        background-size: contain
+        position: absolute
+        top: 133px
+        left: 21px
+        overflow: hidden
+        +r($m-lg)
+            width: 194px
+            left: 17px
+            top: 100px
+            height: 120px
+    &__meta
+        text-align: center
+        font-size: 10px
+    &__amount
+        color: $charcoal
+        +tt-demi
+        font-size: 34px
+        line-height: 1
+        letter-spacing: 0.3px
+        text-align: center
+        margin-top: 18px
+        +r($m-lg)
+            font-size: 25px
+            letter-spacing: 0.2px
+    .green
+        color: $green-positive
+        margin-right: 4px
+    .mountains
+        height: 600px
+

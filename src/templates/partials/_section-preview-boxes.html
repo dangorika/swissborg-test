@@ -1,0 +1,15 @@
+<!-- begin section -->
+<section class="section p-boxes">
+    <div class="l">
+        <div class="p-boxes__in">
+            <div class="p-boxes__items">
+                {% for item in preview_boxes %}
+                <div class="p-boxes__item">
+                    {% include "components/_p-box.html" %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->

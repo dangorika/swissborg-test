@@ -1,0 +1,29 @@
+.subform
+    display: flex
+    +r($m-lg)
+        display: block
+    &__input
+        flex-grow: 1
+        padding-right: 40px
+        +r($m-lg)
+            padding-right: 0
+    &__button
+        +r($m-lg)
+            margin-top: 22px
+            text-align: center
+
+.input
+    input
+        +tt-reg
+        font-size: 20px
+        color: $grey-dark
+        width: 100%
+        height: 48px
+        background: $white
+        border-radius: 8px
+        padding: 4px 12px 0
+        margin-bottom: 12px
+        +placeholder
+            color: $grey-light
+        &::-ms-clear
+            display: none

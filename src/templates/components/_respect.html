@@ -1,0 +1,45 @@
+{% set socials = [
+    {
+        img: 'img/reddit.svg',
+        link: ''
+    },
+    {
+        img: 'img/telegram.svg',
+        link: ''
+    },
+    {
+        img: 'img/facebook.svg',
+        link: ''
+    },
+    {
+        img: 'img/twitter.svg',
+        link: ''
+    }
+] %}
+
+<!-- begin respect -->
+<div class="respect">
+    <div class="l">
+        <div class="respect__in">
+            <h4 class="respect__title">Like what you read? Give us <em>Respect</em></h4>
+            <p class="respect__text">From a quick cheer to a standing ovation, clap to show how much you enjoyed this story.</p>
+            <div class="respect__box">
+                <form action="respect-block.html.php" method="POST" class="respect__likes js-click-counter">
+                    <div class="respect__icon">
+                        <button class="icon-green js-click-counter-btn" type="submit">{{mixins.icon('like')}}</button>
+                    </div>
+                    <input class="respect__likes-count js-click-counter-text" value="0" readonly />
+                </form>
+                <div class="respect__socials socials">
+                    <h5 class="socials__title">Shere:</h5>
+                    <div class="socials__icons">
+                        {% for i in socials %}
+                        <a href="{{ i.link }}" class="social"><img src="{{ i.img }}" alt="" /></a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end respect -->

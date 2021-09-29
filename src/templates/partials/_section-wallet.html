@@ -1,0 +1,48 @@
+{% set wallet = [
+    {
+        icon: 'img/triangle.svg',
+        title: 'Secure',
+        text: 'Use a highly encrypted wallet with a Scombination of multi-signature and cold/ hot storages'
+    },
+    {
+        icon: 'img/circle.svg',
+        title: 'Safer',
+        text: 'Diversify your portfolio with automated rebalancing with our proprietary algorithms'
+    },
+    {
+        icon: 'img/rectangle.svg',
+        title: 'Speedy',
+        text: 'Buy/track/sell with a portfolio management system vs. juggling with 3 - 5 exchanges+ 10-20 crypto assets bought/ sold one asset at a time (highly time-consuming steps)'
+    },
+    {
+        icon: 'img/rhombus.svg',
+        title: 'Scalable',
+        text: 'Institutional grade technology (execution management system/ Order Management System + exchange API`s to provide maximum liquidity robust enough to facilitate (indices/ hedgefunds/ funds of funds and more to come)'
+    },
+    {
+        icon: 'img/octagon.svg',
+        title: 'Simple',
+        text: 'Designed with a user interface and eXperience easy enough for the least tech-savvy'
+    }
+]%}
+
+<!-- begin section -->
+<section class="section wallet">
+    <div class="l">
+        <div class="wallet__in">
+            <h3 class="wallet__title title">The 5`<em>S</em> of the Smart Wallet</h3>
+            <div class="wallet__items">
+                {% for item in wallet %}
+                <div class="wallet__item">
+                    <div class="wallet-el">
+                        <div class="wallet-el__icon"><img src="{{item.icon}}" alt=""/></div>
+                        <h4 class="wallet-el__title">{{item.title}}</h4>
+                        <p class="wallet-el__text">{{item.text}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->

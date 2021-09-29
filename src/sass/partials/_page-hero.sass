@@ -1,0 +1,43 @@
+.page-hero
+    color: $light
+    background-image: $dark-background
+    padding-top: 100px
+    position: relative
+    overflow-x: hidden
+    &__head
+        display: flex
+        align-items: center
+        +r($t-lg)
+            display: block
+    &__title
+        margin-right: 128px
+        +r($m-lg)
+            margin-right: 0
+    &__in
+        padding: 52px 0 306px
+        position: relative
+        z-index: 1
+        +r($m-lg)
+            padding: 4px 0 244px
+    &__text
+        margin-top: 32px
+        max-width: 600px
+        p
+            margin-bottom: 28px
+            font-size: 20px
+            line-height: 1.4
+        ul
+            li
+                padding-left: 26px
+                margin-bottom: 14px
+    .filters
+        +r($t-lg)
+            margin-top: 32px
+    .mountains
+        height: 284px
+        top: auto
+        bottom: 0
+        // min-width: 1440px
+        min-width: 768px
+        left: 50%
+        transform: translateX(-50%)

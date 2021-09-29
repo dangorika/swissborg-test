@@ -1,0 +1,77 @@
+---
+title: ISO Platform
+header_dark: true
+platformPage: true
+
+hero: [
+    {
+        title: 'ISO Platform',
+        titleWhite: true,
+        text: "<p>SwissBorg's Holistic ICO platform focuses on creating a win-win-win for:</p><ul><li>QualityBlockchain Projects/DAO's</li><li>The SwissBorg ecosystem and more importantly</li><li>All the CHSB token holders</li></ul>"
+    }
+]
+
+numbers:
+    quadruple: true
+    title: Hard Facts & Figures
+    list:
+        -
+            figure: '05'
+            text: Accepts cryptoassets (BTC, ETH, BCH, LTC, and XRP)
+        -
+            figure: '04'
+            text: Accepts fiat payments (EUR, USD, GBP, CHF)
+        -
+            figure: '17'
+            text: Million CHF of transactions in a single day
+        -
+            figure: '23,872'
+            text: Participants in 178 countries
+
+
+infoboxes: {
+    title: 'ICO platform will have 3 core functionalities:',
+    list: [
+        {
+            img: 'img/circle.svg',
+            img_small: true,
+            descr: 'Handpicked ICOs for long-term partnerships with SwissBorg`s ecosystem'
+        },
+        {
+            img: 'img/triangle.svg',
+            img_small: true,
+            descr: 'White label/ Customized ICO platform for upcoming projects'
+        },
+        {
+            img: 'img/rectangle.svg',
+            img_small: true,
+            descr: 'ICO competitions with voting systems to elect the winner (twice a year)'
+        }
+    ]
+}
+
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    {% include "partials/_header.html" %}
+
+    <main class="main iso-platform">
+        {% for item in hero %}
+            {% include "partials/_page-hero.html" %}
+        {% endfor %}
+
+        {% include "partials/_section-benefits.html" %}
+
+        {% include "partials/_section-numbers.html" %}
+
+        {% include "partials/_section-platforms.html" %}
+
+        {% include "partials/_section-infoboxes.html" %}
+
+    </main>
+
+    {% include "partials/_footer.html" %}
+
+{% endblock %}

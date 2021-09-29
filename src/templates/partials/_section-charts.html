@@ -1,0 +1,84 @@
+<section class="section charts js-charts">
+    <div class="l">
+        <div class="charts__in">
+
+            <!-- begin chart -->
+            <div class="chart">
+                <div class="chart__topbar">
+                    <div class="chart__topline">
+                        <h3 class="chart__title title">SwissBorg Indices</h3>
+                        <a href="" class="chart__link link link_next js-chart-details" data-start-text="Detailed Metrics" data-end-text="Back to Overview">Detailed Metrics</a>
+                    </div>
+                    <div id="SB-last-updated-at"></div>
+                </div>
+
+                <!-- begin chart__tabs -->
+                <div class="chart__tabs">
+                    <div class="chart__tab js-chart-brief is-active">
+                        <!-- begin chart__tables -->
+                        <div class="chart__tables">
+                            <div class="chart__table">
+                                <div class="chart-table">
+                                    <div class="chart-table__head">
+                                        <div class="chart-table__th">Index</div>
+                                        <div class="chart-table__th">Price (US$)</div>
+                                        <div class="chart-table__th">24h</div>
+                                        <div class="chart-table__th">1year</div>
+                                        <div class="chart-table__th">Total Return (vs BTC)</div>
+                                    </div>
+                                    <div id="SB-indices-list" class="chart-table__body"></div>
+                                </div>
+                            </div>
+
+                            <div class="chart__components">
+                                <div class="chart-components js-chart-components"></div>
+                            </div>
+                        </div>
+                        <!-- end chart__tables -->
+
+                        <!-- pie chart graph -->
+                        <div class="chart__pie">
+                            <div id="portfolioPieChart" class="pie" data-highcharts-chart="0"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="chart__tab js-chart-detail">
+                        <div class="chart-detail-table">
+                            <div class="chart-detail-table__head">
+                                <div class="chart-detail-table__th">Index</div>
+                                <div class="chart-detail-table__th">Start Date</div>
+                                <div class="chart-detail-table__th">Annual Return (Compounded)</div>
+                                <div class="chart-detail-table__th">Annual Outperformance (vs BTC)</div>
+                                <div class="chart-detail-table__th">Annualized Volatility</div>
+                                <div class="chart-detail-table__th">Sharpe Ratio</div>
+                                <div class="chart-detail-table__th">Sortino Ratio</div>
+                                <div class="chart-detail-table__th">Maximum Drawdown</div>
+                            </div>
+                            <div id="SB-indices-detailed-stats" class="chart-detail-table__body"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end chart__tabs -->
+            </div>
+            <!-- end chart -->
+
+            <!-- begin chart -->
+            <div class="chart">
+                <div class="chart__topbar">
+                    <div class="chart__topline">
+                        <h3 class="chart__title title">Relative Performance</h3>
+                    </div>
+                </div>
+
+                <div class="chart__tabs">
+                    <div class="chart__tab is-active">
+                        <div class="history" id="container" data-highcharts-chart="1"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- end chart -->
+
+        </div>
+    </div>
+</section>

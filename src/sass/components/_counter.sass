@@ -1,0 +1,316 @@
+.counter
+    $this: &
+    // display: flex
+    // flex-direction: row-reverse
+    // justify-content: space-between
+    +coverdiv
+    &__item
+        padding-left: 20px
+        position: absolute
+        z-index: 1
+        bottom: 632px
+        &:nth-child(1)
+            left: 76%
+            +r($d-md)
+                left: 78%
+            +r($d-sm)
+                left: 81%
+            +r($t-lg)
+                left: 70%
+                bottom: 562px
+            +r($m-lg)
+                bottom: 272px
+                left: 4%
+            #{$this}__line
+                height: 128px
+                +r($d-sm)
+                    height: 134px
+                +r($t-lg)
+                    height: 74px
+
+        &:nth-child(2)
+            left: 56%
+            +r($d-md)
+                left: 55%
+            +r($d-sm)
+                left: 57%
+            +r($t-lg)
+                left: 49%
+                bottom: 670px
+            +r($m-lg)
+                bottom: 224px
+                left: auto
+                right: 4%
+            #{$this}__line
+                height: 210px
+                +r($d-md)
+                    height: 208px
+                +r($d-sm)
+                    height: 212px
+                +r($t-lg)
+                    height: 238px
+                +r($m-lg)
+                    height: 37px
+                    left: auto
+                    right: 4px
+
+        &:nth-child(3)
+            left: 38%
+            +r($d-md)
+                left: 34%
+            +r($d-sm)
+                left: 32%
+            +r($t-lg)
+                bottom: 562px
+                left: 24%
+            +r($m-lg)
+                bottom: -45px
+                left: auto
+                right: 4%
+            #{$this}__line
+                height: 266px
+                +r($d-md)
+                    height: 276px
+                +r($d-sm)
+                    height: 278px
+                +r($t-lg)
+                    height: 201px
+                +r($m-lg)
+                    height: 180px
+                    left: auto
+                    right: 4px
+                    top: auto
+                    bottom: 44px
+                    background: linear-gradient($green-positive 0%, $white 100%)
+
+        &:nth-child(4)
+            left: 19%
+            +r($d-md)
+                left: 8%
+            +r($d-sm)
+                left: percentage(30/1260)
+            +r($t-lg)
+                bottom: 670px
+            +r($m-lg)
+                bottom: 25px
+                left: 4%
+            #{$this}__line
+                height: 373px
+                +r($d-md)
+                    height: 315px
+                +r($d-sm)
+                    height: 310px
+                +r($t-lg)
+                    height: 348px
+                +r($m-lg)
+                    height: 89px
+                    top: auto
+                    bottom: 44px
+                    background: linear-gradient($green-positive 0%, $white 100%)
+
+
+    &__figure
+        +tt-demi
+        color: $light
+        line-height: 1.03
+        font-size: 40px
+        transition: color .3s $easing-common
+        cursor: pointer
+        +r($m-lg)
+            font-size: 20px
+            color: $green-positive
+        span
+            font-size: 66px
+            margin-right: 15px
+            +r($m-lg)
+                font-size: 40px
+        &.is-active
+            color: $green-positive
+    &__text
+        margin-top: -4px
+        color: $charcoal
+        position: absolute
+        top: 100%
+        left: 20px
+    &__line
+        position: absolute
+        top: 44px
+        left: 4px
+        background: linear-gradient($white 0%, $green-positive 100%)
+        width: 1px
+        height: 100%
+        &:before, &:after
+            content: ""
+            position: absolute
+            background-color: $green-positive
+            border-radius: 50%
+        &:before
+            top: 0
+            width: 5px
+            height: 5px
+            left: -2px
+        &:after
+            bottom: 0
+            width: 7px
+            height: 7px
+            left: -3px
+    &_quadruple
+        #{$this}__text
+            width: 222px
+            +r(1150)
+                width: 160px
+            +r($m-lg)
+                width: 177px
+        #{$this}__item
+            &:nth-child(1)
+                left: 73%
+                +r($d-md)
+                    left: 76%
+                +r($d-sm)
+                    left: 78%
+                +r($t-lg)
+                    left: 73%
+                    bottom: 600px
+                +r($m-lg)
+                    bottom: 396px
+                    left: 4%
+                #{$this}__line
+                    height: 131px
+                    +r($d-md)
+                        height: 129px
+                    +r($t-lg)
+                        height: 99px
+                    +r($m-lg)
+                        height: 198px
+            &:nth-child(2)
+                +r($m-lg)
+                    bottom: 280px
+                #{$this}__line
+                    +r($m-lg)
+                        height: 95px
+                #{$this}__text
+                    +r($m-lg)
+                        left: -110px
+            &:nth-child(3)
+                #{$this}__text
+                    +r($m-lg)
+                        left: -65px
+    &_triple
+        #{$this}__text
+            width: 100vw
+            max-width: 368px
+            left: 35px
+            +r($d-sm)
+                max-width: 120px
+            +r($m-lg)
+                left: 27px
+                margin-top: 3px
+        #{$this}__figure
+            +r($m-lg)
+                font-size: 40px
+                span
+                    font-size: 66px
+        #{$this}__item
+            padding-left: 35px
+            bottom: 487px
+            +r($d-md)
+                bottom: 352px
+            +r($t-lg)
+                bottom: 304px
+            +r($m-lg)
+                padding-left: 27px
+            &:nth-child(1)
+                left: 70%
+                +r($d-md)
+                    left: 66%
+                +r($d-sm)
+                    left: 75%
+                +r($t-lg)
+                    left: 64.5%
+                +r($m-lg)
+                    left: 40%
+                    bottom: -33px
+                +r($m-sm)
+                    left: 40%
+                    bottom: -90px
+                #{$this}__line
+                    height: 333px
+                    +r($d-md)
+                        height: 213px
+                    +r($d-sm)
+                        height: 158px
+                    +r($t-lg)
+                        height: 165px
+                    +r($m-lg)
+                        bottom: 0px
+                        top: auto
+                        height: 142px
+                    +r($m-sm)
+                        height: 144px
+            &:nth-child(2)
+                left: 45%
+                +r($d-md)
+                    left: 37%
+                +r($d-sm)
+                    left: 41%
+                +r($t-lg)
+                    left: 40%
+                +r($m-lg)
+                    bottom: 210px
+                    left: auto
+                    right: 30%
+                +r($m-sm)
+                    bottom: 176px
+                    right: 10%
+                #{$this}__line
+                    height: 316px
+                    +r($d-md)
+                        height: 161px
+                    +r($d-sm)
+                        height: 179px
+                    +r($t-lg)
+                        height: 129px
+                    +r($m-lg)
+                        height: 143px
+                    +r($m-sm)
+                        height: 136px
+                #{$this}__figure
+                    +r($m-lg)
+                        padding-right: 27px
+                        width: 100vw
+                        max-width: 147px
+                #{$this}__text
+                    +r($m-lg)
+                        left: auto
+                        right: 27px
+            &:nth-child(3)
+                left: 18.5%
+                +r($d-md)
+                    left: 8%
+                +r($d-sm)
+                    left: 12%
+                +r($t-lg)
+                    left: 15.5%
+                +r($m-lg)
+                    left: 30%
+                    bottom: 210px
+                +r($m-sm)
+                    bottom: 176px
+                    left: 12%
+                #{$this}__line
+                    height: 417px
+                    +r($d-md)
+                        height: 191px
+                    +r($d-sm)
+                        height: 223px
+                    +r($t-lg)
+                        height: 226px
+                    +r($m-lg)
+                        background: linear-gradient($white 0%, $green-positive 100%)
+                        right: auto
+                        bottom: auto
+                        left: 4px
+                        top: 44px
+                        height: 133px
+                    +r($m-sm)
+                        height: 167px

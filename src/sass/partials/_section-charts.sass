@@ -1,0 +1,243 @@
+.chart
+    margin-bottom: 120px
+    position: relative
+    z-index: 2
+    +r($m-lg)
+        margin-bottom: 70px
+    &__topbar
+        margin-bottom: 48px
+    &__topline
+        margin-bottom: 20px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        +r($m-lg)
+            margin-bottom: 12px
+    &__link
+        +r($t-lg)
+            display: none
+        &:after
+            top: 9px
+    &__tab
+        display: none
+        +r(1185)
+            flex-direction: column
+        &.is-active
+            display: flex
+    &__pie
+        width:  456px
+        min-width: 456px
+        height: 506px
+        +r(1185)
+            order: 0
+            margin: 0 auto 36px
+        +r($m-lg)
+            width: 286px
+            min-width: 286px
+            height: 348px
+            margin-bottom: 30px
+    &__tables
+        padding-right: 36px
+        flex-grow: 1
+        +r(1185)
+            order: 1
+            padding-right: 0
+    &__table, &__components
+        overflow-x: auto
+
+.pie
+    &__title
+        +tt-demi
+        font-size: 24px
+        line-height: 1.08
+        text-transform: capitalize
+
+
+.chart-table
+    min-width: 656px
+    padding-bottom: 28px
+    margin-bottom: 28px
+    border-bottom: 1px solid $light
+    &__head, &__tr
+        display: flex
+        justify-content: space-between
+    &__tr
+        border-radius: 8px
+        cursor: pointer
+        transition: color .3s $easing-common, background-color .3s $easing-common
+        &:hover
+            color: #191E29
+        &.is-bold
+            background-color: $light
+            color: #191E29
+    &__th, &__td
+        padding: 13px 24px
+        text-align: right
+        &:nth-child(1)
+            width: percentage(154/680)
+            text-align: left
+        &:nth-child(2)
+            width: percentage(120/680)
+        &:nth-child(3)
+            width: percentage(92/680)
+        &:nth-child(4)
+            width: percentage(100/680)
+        &:nth-child(5)
+            width: percentage(184/680)
+    &__th
+        font-size: 16px
+    &__td
+        font-size: 20px
+
+.chart-component
+    min-width: 380px
+    display: none
+    &.is-active
+        display: block
+    &__in
+        display: flex
+        justify-content: space-between
+.chart-component-table
+    width: percentage(290/680)
+    &__head
+        display: flex
+        justify-content: space-between
+        margin-bottom: 5px
+    &__tr
+        display: flex
+        justify-content: space-between
+        border-radius: 8px
+        &:nth-child(odd)
+            background-color: #F7F9FB
+    &__th, &__td
+        &:nth-child(2)
+            text-align: right
+    &__th
+        font-size: 16px
+        color: $grey-light
+        width: 50%
+    &__td
+        width: 50%
+        font-size: 16px
+        padding: 0 10px
+
+
+.chart-detail-table
+    width: 100%
+    &__head, &__tr
+        display: flex
+        justify-content: space-between
+    &__tr
+        border-radius: 8px
+        cursor: pointer
+        &:hover
+            background-color: $light
+    &__th
+        font-size: 16px
+    &__td
+        font-size: 20px
+    &__th, &__td
+        padding: 13px 24px
+        text-align: right
+        &:nth-child(1)
+            width: percentage(144/1200)
+            text-align: left
+        &:nth-child(2)
+            width: percentage(144/1200)
+        &:nth-child(3)
+            width: percentage(144/1200)
+        &:nth-child(4)
+            width: percentage(144/1200)
+        &:nth-child(5)
+            width: percentage(120/1200)
+        &:nth-child(6)
+            width: percentage(100/1200)
+        &:nth-child(7)
+            width: percentage(100/1200)
+        &:nth-child(8)
+            width: percentage(100/1200)
+
+.history
+    width: 100%
+    .highcharts
+        &-navigator-mask-inside
+            border-radius: 8px
+        &-plot-line
+            transform: translateY(1px)
+        &-range-selector-buttons
+            &>text
+                // transform: translateY(13px)
+                // +r($t-lg)
+                //     transform: translateY(6px)
+                +r($m-lg)
+                    display: none
+        // &-button
+        //     &>text
+        //         transform: translateY(11px)
+        //         +r($t-lg)
+        //             transform: translateY(4px)
+        &-range-label
+            &:first-child
+                &>text
+                    +r($m-lg)
+                        display: none
+        //         transform: translateY(11px)
+        //         +r($t-lg)
+        //             transform: translateY(5px)
+        // &-range-input
+        //     &>text
+        //         transform: translateY(10px)
+        //         +r($t-lg)
+        //             transform: translateY(5px)
+        &-contextmenu
+            padding: 32px !important
+            +r($t-lg)
+                padding: 24px !important
+        &-menu
+            margin-top: 18px
+            position: relative
+            left: -10px
+            border: 1px solid $light !important
+            box-shadow: 0px 4px 40px rgba(25, 30, 41, 0.06) !important
+            border-radius: 8px
+            +r($m-lg)
+                margin-top: 26px
+                left: -22px
+            &-item
+                font-size: 20px !important
+                color: $grey-dark !important
+                &:hover
+                    color: $charcoal !important
+                    background-color: $light !important
+            hr
+                display: none
+        // &-contextbutton
+        //     rect
+        //         transform: translateY(8px)
+        //         +r($t-lg)
+        //             transform: translateY(3px)
+        //         +r($m-lg)
+        //             transform: translateY(0)
+        // &-button-symbol
+        //     +r($t-lg)
+        //         transform: translateY(3px)
+        //     +r($m-lg)
+        //         transform: translateY(0)
+
+
+    input.highcharts-range-selector
+        &:focus
+            border: 1px solid $grey-dark !important
+            height: 47px !important
+            width: 113px !important
+            border-radius: 8px
+            color: $charcoal !important
+            transition: border-color .3s $easing-common
+            top: 0 !important
+            +r($t-lg)
+                top: 56px !important
+            +r($m-lg)
+                width: 95px !important
+            //     height: 37px !important
+.highcharts-credits
+    display: none

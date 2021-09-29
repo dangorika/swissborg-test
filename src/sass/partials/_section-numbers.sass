@@ -1,0 +1,91 @@
+.numbers
+    $this: &
+    position: relative
+    z-index: 2
+    height: 800px
+    overflow: hidden
+    +r($m-lg)
+        height: 500px
+    .l
+        height: inherit
+    &__in
+        height: inherit
+        padding: 80px 0 120px
+        +r($m-lg)
+            padding: 5px 0
+    &__title
+        margin-bottom: 115px
+    &__shape
+        position: absolute
+        bottom: -160px
+        left: 50%
+        transform: translateX(-50%)
+        height: 575px
+        width: 100%
+        min-width: 1920px
+        // display: none
+        +r($d-md)
+            min-width: 1440px
+        +r($d-sm)
+            min-width: auto
+        +r($m-lg)
+            bottom: auto
+            top: 220px
+            height: 200px
+        &.is-ready
+            display: block
+        path:not(:last-child)
+            cursor: pointer
+        svg
+            position: relative
+            z-index: 1
+            +r($m-lg)
+                height: 100px
+    &__shapebox
+        position: relative
+        z-index: 1
+    &_quadruple
+        height: 764px
+        +r($t-lg)
+            height: 800px
+        +r($m-lg)
+            height: 715px
+        #{$this}__title
+            font-size: 40px
+        #{$this}__shape
+            bottom: -118px
+            +r($t-lg)
+                bottom: -100px
+            +r($m-lg)
+                top: 356px
+    &_triple
+        height: 803px
+        +r($d-md)
+            height: 603px
+        +r($t-lg)
+            height: 558px
+        +r($m-lg)
+            height: 634px
+        #{$this}__title
+            font-size: 40px
+        #{$this}__shape
+            bottom: 0
+            height: auto
+            +r($d-sm)
+                min-width: 1260px
+            +r($t-lg)
+                min-width: 1024px
+            +r($m-lg)
+                min-width: 768px
+                top: auto
+                bottom: 200px
+            +r($m-sm)
+                min-width: 375px
+            svg
+                display: block
+                width: 100%
+                +r($m-lg)
+                    height: auto
+        #{$this}__in
+            padding: 60px 0 0 0
+

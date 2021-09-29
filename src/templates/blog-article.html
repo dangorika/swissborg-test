@@ -1,0 +1,74 @@
+---
+title: Blog article
+articleRespect: true
+moreArticlesTitle: More articles
+article: [
+    {
+        title: 'Get to know SwissBorg’s Referendum II',
+        subtitle: '<p>Vivian Xu is so young that it feels odd to ask her about her biography, it has hardly begun!</p>',
+        btnBack: 'back to blog',
+        tag: 'Referendum',
+        date: 'Sep 21',
+        content: '<p>In the history of modern financial services, the opportunity for new contenders to become tomorrow’s leaders has never been greater. This Referendum is an opportunity for CHSB token holders to help shape SwissBorg’s future projects and redraw the landscape of the financial world.
+                <br/>
+                <br/>
+                Through robotics, automation, self-learning algorithms and decentralization, digitalization is disrupting the banks’ business models by reducing costs and leveraging swarm intelligence
+                <br/>
+                <br/>
+                As blockchain protocols evolve, we anticipate growth at the application layer, the so-called “Dapp”. Just like it took time for email application to develop after internet protocols emerged, expansion of blockchain technology has laid the foundation for an ecosystem of Dapps.</p>
+
+                <h4>A financial ecosystem for a decentralized future</h4>
+
+                <p>In less than a decade, tech giants such as Uber, Facebook, Alibaba, and Airbnb have amplified their dominance thanks to their network economics and evolutionary business models. Like a snowball effect, the more users they have, the more data they collect. The more data they collect, the more they can enhance their algorithms. This cycle generates better services for their consumers (and advertisers) while increasing the benefits of being a part of their network. These models, networks, and cycles end up developing a highly centralized marketplace.</p>
+
+                <img src="img/img-eco.png" alt="" />
+
+                <p>Decentralization and meritocracy are the center of the next wave of innovations, that will notably disrupt financial services:
+                <br/>
+                <br/>
+                The ultimate potential of the blockchain lies in its ability to provide a direct peer to peer interaction without the need for a costly and intrusive intermediary. Through utility tokens, the community will turn blockchains into networks and markets.</p>
+
+                <h4>How do utility tokens help build decentralized ecosystems?</h4>
+
+                <p>Money is a form of accounting between individuals in a society meant to facilitate exchange. But this traditional tool of exchange entails a prominent and intrusive role played by an intermediary, namely a central bank, that designates and insures value. Blockchain and tokenization promise to disrupt this system and usher in a new ecosystem that enables peer to peer interaction and lowers the cost and intrusiveness of intermediaries.
+                <br/>
+                <br/>
+                A class of token that is growing in popularity and proving to be very essential within the blockchain ecosystem is the ‘utility token’. This class of tokens exists, primarily, as units of accessibility on the blockchains that they represent. A more interesting characteristic of these tokens is the versatility that they offer by revolutionizing existing concepts and creating new ecosystems that empower the participants therein.
+                <br/>
+                <br/>
+                The ideal utility token creates a <strong>win/win solution</strong> for every single stakeholders’ interaction with an ecosystem.
+                <br/>
+                <br/>
+                Bitcoin example:</p>
+
+                <ol>
+                    <li><strong><i>Miners</i></strong> are happy to lend their computing power to validate transactions because they receive a reward in bitcoin.</li>
+                    <li><strong><i>Bitcoin enthusiasts</i></strong> are happy to pay miners because bitcoin transactions are (most of the time) cheaper and faster than bank transfers.</li>
+                </ol>
+
+                <img src="img/graph.png" alt="" />'
+    }
+]
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    {% include "partials/_header.html" %}
+
+    <main class="main article-wrap js-white-layout">
+
+        {% for item in article %}
+            {% include "partials/_section-article.html" %}
+        {% endfor %}
+
+        <div class="widgets">
+            {% include "components/_respect.html" %}
+            {% include "partials/_section-more-articles.html" %}
+        </div>
+
+    </main>
+
+    {% include "partials/_footer.html" %}
+
+{% endblock %}

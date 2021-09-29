@@ -1,0 +1,43 @@
+.tab
+    $this: &
+    position: relative
+    display: block
+    padding: 24px 24px 24px 80px
+    border-radius: 8px
+    transition: background-color .3s $easing-common
+    +r($t-lg)
+        padding-bottom: 0
+    +r($m-lg)
+        border: 1px solid $light
+        padding-left: 24px
+    &.is-active, &:hover
+        background-color: $light
+    &__img
+        width: 32px
+        height: 32px
+        position: absolute
+        top: 24px
+        left: 24px
+        +r($m-lg)
+            float: left
+            position: static
+            margin-right: 24px
+    &__text
+        margin-top: 6px
+        h1, h2, h3, h4, h5, h6
+            margin-bottom: 14px
+            +r($t-lg)
+                margin-bottom: 12px
+        &:not(.tab__text_mob)
+            +r($t-lg)
+                padding-bottom: 32px
+            +r($m-lg)
+                padding-bottom: 16px
+
+        &_mob
+            display: none
+            padding-bottom: 32px
+            margin-top: 0
+            +r($m-lg)
+                padding-bottom: 16px
+

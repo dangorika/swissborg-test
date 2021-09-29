@@ -1,0 +1,60 @@
+.benefits
+    position: relative
+    margin-top: 80px
+    padding-top: 50px
+    margin-bottom: 42px
+    +r($t-lg)
+        margin-bottom: 96px
+    +r($m-lg)
+        margin-bottom: 40px
+    &:before
+        content: ''
+        position: absolute
+        top: 10px
+        left: 0
+        width: 100%
+        height: 2px
+        background-color: $green-positive
+    &__in
+        overflow: visible
+    &__item
+        position: relative
+        &:before
+            content: ''
+            position: absolute
+            top: -44px
+            left: 0
+            width: 10px
+            height: 10px
+            border-radius: 50%
+            background-color: $green-positive
+        &:after
+            content: ""
+            width: 2px
+            height: 30px
+            background: linear-gradient( #01C38D 0%, rgba(1, 195, 141, 0) 100% )
+            position: absolute
+            top: -36px
+            left: 4px
+    &__text
+        max-width: 368px
+        +r($t-lg)
+            max-width: 336px
+        +r($m-lg)
+            max-width: none
+    &__controls
+        display: none
+        padding-top: 100px
+        max-width: 368px
+        margin: 0 auto
+        justify-content: space-between
+        +r($t-lg)
+            display: flex
+        +r($m-lg)
+            padding-top: 40px
+    .control
+        color: $grey-light
+        &:hover
+            color: $green-positive
+
+

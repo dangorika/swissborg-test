@@ -1,0 +1,137 @@
+.roadmap
+    $this: &
+    &__slider
+        overflow: visible
+        margin-bottom: 80px
+        +r($t-lg)
+            min-width: 768px
+    &__slide
+        width: auto
+        height: 265px
+        color: $white
+        +r($m-lg)
+            height: auto
+        &:before
+            content: ""
+            width: 100%
+            height: 2px
+            background-color: $green-positive
+            +vcenter
+            +r($m-lg)
+                transform: none
+                top: auto
+                left: 0
+                bottom: 2px
+        &.swiper-slide-active
+            .roadmap__circle
+                +rmin(768)
+                    font-size: 0
+                    &:before
+                        transform: translateX(-50%) scaleY(1)
+                    &:after
+                        transform: scale(0.22)
+                        background: $green-positive
+    &__info
+        height: 50%
+        position: relative
+        padding: 0 48px 0 0
+        display: flex
+        +r($m-lg)
+            height: 100%
+            padding: 48px 0 0 0
+        &_bottom
+            +rmin(768)
+                top: 50%
+                #{$this}__description
+                    padding-top: 44px
+                    padding-bottom: 0
+                    align-self: flex-start
+                #{$this}__year
+                    bottom: auto
+                    top: 44px
+                    transform: rotate(-90deg) translate(-6px, -79px)
+                    transform-origin: 100% 0
+                    +r($m-lg)
+                        transform: none
+                #{$this}__circle
+                    bottom: auto
+                    top: -22px
+                    &:before
+                        top: 26px
+                        transform-origin: 50% 0%
+                        background: linear-gradient(#01C38D 0%, rgba(1, 195, 141, 0) 100%)
+        &_year
+            padding: 0 48px 0 104px
+            &:before
+                content: ""
+                width: 2px
+                height: 10px
+                position: absolute
+                bottom: -5px
+                left: 0
+                background-color: $green-positive
+                +r($m-lg)
+                    display: none
+            &.roadmap__info_bottom
+                &:before
+                    bottom: auto
+                    top: -5px
+    &__description
+        align-self: flex-end
+        padding-bottom: 44px
+        +r($m-lg)
+            align-self: flex-start
+            padding: 24px 0 44px
+    &__year
+        position: absolute
+        bottom: 44px
+        left: 0
+        transform-origin: 0 100%
+        transform: rotate(-90deg) translate(6px, 42px)
+        +r($m-lg)
+            transform: none
+            padding: 0
+            top: 8px
+            margin-bottom: 12px
+    &__text
+        max-width: 264px
+    &__circle
+        width: 44px
+        height: 44px
+        line-height: 48px
+        text-align: center
+        +tt-demi
+        font-size: 24px
+        position: absolute
+        z-index: 1
+        bottom: -22px
+        left: -2px
+        +r($m-lg)
+            bottom: 28px
+        &:before
+            content: ""
+            width: 2px
+            height: 30px
+            background: linear-gradient(rgba(1, 195, 141, 0) 0%, #01C38D 100%)
+            position: absolute
+            bottom: 26px
+            left: 50%
+            transform-origin: 50% 100%
+            transform: translateX(-50%) scaleY(0)
+            transition: transform .3s $easing-common
+        &:after
+            content: ""
+            +coverdiv
+            z-index: -1
+            background: $gradient-background
+            border-radius: 50%
+            transition: transform .3s $easing-common, background .3s $easing-common
+            background-size: 300% 300%
+            animation: gradientchange 6s $easing-common infinite
+    &__controls
+        max-width: 368px
+        margin: 0 auto
+        display: flex
+        justify-content: space-between
+
+

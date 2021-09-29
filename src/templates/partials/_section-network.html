@@ -1,0 +1,34 @@
+{% set roadmap = [
+    {
+        year: '2015',
+        text: 'Market research & Thorough analysis of fintech space',
+        circle: 'Q1'
+    },
+    {
+        text: 'Active portfolio management in equity, derivatives and crypto',
+        circle: 'Q2'
+    },
+    {
+        year: '2016',
+        text: 'SwissBorg / Pivot to Blockchain / Smart Contracts research on underlying technology',
+        circle: 'Q3',
+        bottom: true
+    },
+    {
+        text: 'Market research & Thorough analysis of fintech space',
+        circle: 'Q4',
+        bottom: true
+    }
+] %}
+
+<!-- begin section -->
+<div class="subsection network">
+    <div class="network__before reveal js-reveal-end"></div>
+    <div class="l">
+        <div class="network__in">
+            <h2 class="network__title title title_white js-reveal">SwissBorg Network Roadmap</h2>
+            {% include "components/_roadmap.html" %}
+        </div>
+    </div>
+</div>
+<!-- end section -->

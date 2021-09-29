@@ -1,0 +1,69 @@
+---
+title: Careers/Financial Scala Engineer
+moreArticlesTitle: More Press Releases
+article: [
+    {
+        mod: 'secondary',
+        title: 'Financial Scala Engineer',
+        button: 'Apply for this job',
+        btnBack: 'back to Careers',
+        tag: 'Engineering',
+        date: 'Lausanne, Switzerland',
+        content: '
+                <h4>A financial ecosystem for a decentralized future</h4>
+
+                <p>In less than a decade, tech giants such as Uber, Facebook, Alibaba, and Airbnb have amplified their dominance thanks to their network economics and evolutionary business models. Like a snowball effect, the more users they have, the more data they collect. The more data they collect, the more they can enhance their algorithms. This cycle generates better services for their consumers (and advertisers) while increasing the benefits of being a part of their network. These models, networks, and cycles end up developing a highly centralized marketplace.</p>
+
+                <h4>How do utility tokens help build decentralized ecosystems?</h4>
+
+                <ul>
+                    <li>Write server-side Scala code to build a scalable infrastructure capable of handling digital cash and crypto-currency transactions for smartphone users all around the world. </li>
+                    <li>Identify requirements for backend architecture design and API with the engineeringteam. </li>
+                    <li>Integrate with multiple crypto exchanges, focusing on high scalability. </li>
+                    <li>Solve algorithmical challenging problems in the context of finance and distributed systems. </li>
+                    <li>Write rigorous automated tests and ensure code quality and documentation. </li>
+                    <li>Optimize the code for performance.</li>
+                </ul>
+
+                <h4>How do utility tokens help build decentralized ecosystems?</h4>
+
+                <ul>
+                    <li>Master`s or PhD in Computer Science or related field. </li>
+                    <li>Expertise in Scala a must. </li>
+                    <li>Experience with JVM technologies, RDBMs, cloud architectures. Cassandra and Kafka a plus. </li>
+                    <li>Knowledge about the CQRS/Event Sourcing architecture. </li>
+                    <li>Strong sense of ownership and entrepreneurial thinking - customer value should be your key driver </li>
+                    <li>Flexible, proactive, organized, detail-oriented and entrepreneurial. </li>
+                    <li>Excellent English communication skills. French is a plus. </li>
+                    <li>Experience in the finance indutry a plus.</li>
+                </ul>
+
+                <h4>How do utility tokens help build decentralized ecosystems?</h4>
+
+                <ul>
+                    <li>Freedom to create, build a research architecture and the company you always dreamed of. </li>
+                    <li>Grow in an environment with experts in crypto, investments, coding, AI, psychology, and business </li>
+                    <li>Fair compensation. </li>
+                    <li>Bonus based on our meritocratic system. </li>
+                    <li>Flexible work hours.</li>
+                </ul>'
+    }
+]
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+    {% include "partials/_header.html" %}
+
+    <main class="main article-wrap js-white-layout">
+
+        {% for item in article %}
+            {% include "partials/_section-article.html" %}
+        {% endfor %}
+
+    </main>
+
+    {% include "partials/_footer.html" %}
+
+{% endblock %}

@@ -1,0 +1,308 @@
+.header
+    $this: &
+    position: absolute
+    z-index: 100
+    top: 0
+    left: 0
+    width: 100%
+    // background: $white
+    background: transparent
+    +r($m-lg)
+        position: fixed
+    .nav
+        margin-right: 18px
+        +r($t-lg)
+            margin-right: 0
+    .nav, .lang
+        +r($t-lg)
+            opacity: 0
+            transition: opacity .3s $easing-common
+            visibility: hidden
+    &__in
+        display: flex
+        justify-content: space-between
+        align-items: center
+        max-width: 1372px
+        height: 100px
+        margin: 0 auto
+        padding: 0 30px
+        +r($t-lg)
+            max-width: none
+            width: 100%
+            &:before
+                content: ""
+                +coverdiv
+                background: $charcoal
+                z-index: 101
+                display: none
+        +r($m-lg)
+            height: 52px
+            padding: 0 15px
+    &__logo
+        +r($t-lg)
+            flex-grow: 1
+            position: relative
+            z-index: 101
+    &__burger
+        display: none
+        position: relative
+        z-index: 101
+        +r($t-lg)
+            display: block
+    &__nav
+        display: flex
+        align-items: center
+        margin-right: -7px
+        +r($t-lg)
+            display: none
+            position: fixed
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: 100
+            overflow-y: auto
+            // background: $white
+            background: $dark-background
+            // padding-top: 24vh
+            padding: 114px 0
+    &__lang
+        padding-left: 18px
+        position: relative
+        +r($t-lg)
+            text-align: center
+            padding-left: 0
+        &:before
+            content: ""
+            width: 1px
+            height: 36px
+            background-color: $grey-light
+            position: absolute
+            top: 50%
+            left: 0
+            transform: translateY(-50%)
+            +r($t-lg)
+                display: none
+
+    &_dark
+        // background: $charcoal
+        .nav
+            &__item
+                color: $grey-light
+        .subnav
+            background: $charcoal
+        .lang
+            color: $grey-light
+            &__toggle
+                &:after
+                    border-color: $grey-light
+            &__list
+                background: $charcoal
+        #{$this}__nav
+            +r($t-lg)
+                background: $charcoal
+    &_unfixed
+        position: absolute
+        top: 100vh
+        +r($m-lg)
+            position: fixed
+            top: 0
+    &.is-fixed
+        background: $charcoal
+        position: fixed
+        top: 0
+        opacity: 0
+        visibility: hidden
+        transition: opacity .3s $easing-common
+        +r($m-lg)
+            opacity: 1
+            visibility: visible
+        &.is-visible, &:hover
+            opacity: 1
+            visibility: visible
+    // &.is-home-fixed
+    //     background: $charcoal
+    //     opacity: 0
+    //     visibility: hidden
+    //     position: fixed
+    //     top: 0
+    //     transition: opacity .3s $easing-common
+    //     &.is-visible, &:hover
+    //         opacity: 1
+    //         visibility: visible
+    &.is-active
+        position: fixed
+        top: 0
+        opacity: 1
+        visibility: visible
+        #{$this}__in
+            &:before
+                display: block
+        #{$this}__nav
+            display: block
+        .nav, .lang
+            opacity: 1
+            visibility: visible
+
+.nav
+    display: flex
+    +r($t-lg)
+        flex-direction: column
+        align-items: center
+
+    &__item
+        margin-left: 40px
+        margin-top: 36px
+        position: relative
+        padding-bottom: 36px
+        +r($d-sm)
+            margin-left: 32px
+        +r($t-lg)
+            padding: 0
+            margin: 0 0 16px 0
+            text-align: center
+        &:hover
+            .subnav
+                opacity: 1
+                transform: translateY(0)
+                visibility: visible
+    &__link
+        font-size: 18px
+        line-height: 1
+        padding: 7px
+        transition: color .3s $easing-common
+        &:hover
+            color: $green-positive
+            +r($t-lg)
+                color: $white
+        +r($t-lg)
+            color: $white
+        +r($t-lg)
+            font-size: 24px
+            +tt-demi
+            font-weight: normal
+
+.lang
+    $this: &
+    position: relative
+    padding-bottom: 32px
+    margin-top: 32px
+    +r($t-lg)
+        display: inline-block
+        padding-bottom: 0
+    &:hover
+        #{$this}__list
+            opacity: 1
+            transform: translateY(0)
+            visibility: visible
+        #{$this}__toggle
+            color: $green-positive
+            +r($t-lg)
+                color: $grey-light
+            &:after
+                border-color: $green-positive
+                transform: rotate(135deg) translateY(-2px)
+                +r($t-lg)
+                    border-color: $grey-light
+    a
+        font-size: 18px
+        text-transform: capitalize
+        line-height: 1
+        padding: 7px
+        transition: color .3s $easing-common
+        +r($t-lg)
+            color: $grey-light
+        &:hover
+            color: $green-positive
+            +r($t-lg)
+                color: $grey-light
+    &__toggle
+        font-size: 18px
+        color: currentColor
+        padding: 7px
+        text-transform: capitalize
+        transition: color .3s $easing-common
+        +r($t-lg)
+            color: $grey-light
+        &:after
+            content: ""
+            margin: 6px 0 0 10px
+            display: inline-block
+            vertical-align: top
+            width: 5px
+            height: 5px
+            border-left: 1px solid $grey-dark
+            border-bottom: 1px solid $grey-dark
+            transform: rotate(-45deg)
+            transition: border-color .3s $easing-common, transform .3s $easing-common
+            +r($t-lg)
+                border-color: $grey-light
+    &__list
+        background: $white
+        position: absolute
+        z-index: 100
+        top: 100%
+        left: -36px
+        min-width: 82px
+        border-top: 1px solid $green-positive
+        padding: 30px 0
+        opacity: 0
+        transform: translateY(16px)
+        visibility: hidden
+        transition: opacity .3s $easing-common, transform .3s $easing-common, visibility .3s 0s $easing-common
+        +r($t-lg)
+            padding: 0
+            background: none
+            border-top: none
+            position: static
+            opacity: 1
+            transform: none
+            visibility: visible
+    &__item
+        font-size: 18px
+        display: block
+        margin: 8px 24px
+        white-space: nowrap
+        +r($t-lg)
+            margin-left: 16px
+
+.subnav
+    background: $white
+    position: absolute
+    z-index: 100
+    top: 100%
+    left: -36px
+    border-top: 1px solid $green-positive
+    min-width: 216px
+    padding: 30px 0 32px
+    opacity: 0
+    transform: translateY(16px)
+    visibility: hidden
+    transition: opacity .3s $easing-common, transform .3s $easing-common, visibility .3s 0s $easing-common
+    +r($t-lg)
+        position: relative
+        left: 0
+        transform: none
+        visibility: visible
+        opacity: 1
+        border: none
+        min-width: auto
+        padding: 0
+        top: 12px
+        padding-bottom: 12px
+    &__item
+        display: block
+        margin: 8px 36px
+        +r($t-lg)
+            font-size: 18px
+            margin: 8px 0
+    &__link
+        font-size: 18px
+        line-height: 1
+        padding: 7px
+        transition: color .3s $easing-common
+        &:hover
+            color: $green-positive
+            +r($t-lg)
+                color: $white
+

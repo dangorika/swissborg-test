@@ -1,0 +1,33 @@
+.wallet
+    padding-bottom: 120px
+    &__in
+        padding: 46px 0 0 0
+        +r($t-lg)
+            padding: 112px 0 0 0
+        +r($m-lg)
+            padding: 0
+    &__title
+        margin-bottom: 80px
+        +r($m-lg)
+            margin-bottom: 50px
+        em
+            color: $green-positive
+            font-style: normal
+    &__items
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+    &__item
+        margin-bottom: 22px
+        padding-bottom: 18px
+        border-bottom: 1px solid $light
+        width: percentage(523/1200)
+        +r($t-lg)
+            width: 100%
+            margin-bottom: 18px
+        +r($m-lg)
+            margin-bottom: 14px
+        &:nth-last-child(-n+2)
+            border: none
+        &:nth-last-child(2)
+            border-bottom: 1px solid $light

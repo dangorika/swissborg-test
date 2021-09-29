@@ -1,0 +1,69 @@
+{% set poster = [
+    {
+        main: true,
+        date: 'Sep 21',
+        image: 'img/article.jpg',
+        title: 'Meet Vivian Xu: SwissBorg’s New Quantitative Research Analyst',
+        text: 'Vivian Xu is so young that it feels odd to ask her about her biography, it has hardly begun!',
+        tags: [
+            {
+                text: 'Events'
+            }
+        ]
+    }
+] %}
+
+{% set title = 'Top articles' %}
+
+{% set links = [
+    {
+        small: true,
+        date: 'Sep 21',
+        title: 'Meet Carlos Cabrera: SwissBorg’s Business Developer in Toronto',
+        tags: [
+            {
+                text: 'Crypto Quant Insight'
+            }
+        ]
+    },
+    {
+        small: true,
+        date: 'Sep 21',
+        title: 'SwissBorg Partners with Japan’s Ginco',
+        tags: [
+            {
+                text: 'Meet The Team'
+            }
+        ]
+    },
+    {
+        small: true,
+        date: 'Sep 21',
+        title: 'Swarm Intelligence in action — SwissBorg’s Community Committee',
+        tags: [
+            {
+                text: 'Crypto Quant Insight'
+            }
+        ]
+    },
+    {
+        small: true,
+        date: 'Sep 21',
+        title: 'SwissBorg Crypto Indices Are Live!',
+        tags: [
+            {
+                text: 'ICO Chronicles'
+            }
+        ]
+    }
+] %}
+
+<!-- begin section -->
+<section class="section blog-hero">
+    <div class="l">
+        <div class="blog-hero__in">
+            {% include "components/_article-preview.html" %}
+        </div>
+    </div>
+</section>
+<!-- end section -->

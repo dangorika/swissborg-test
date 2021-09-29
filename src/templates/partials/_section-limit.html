@@ -1,0 +1,30 @@
+{% set limitations = {
+    title: 'Off-chain & Onchain Limitations',
+    boxes: [
+        {
+            img: 'offchain',
+            text: '<h4>Offchain</h4><ul><li>Timing consuming</li><li>Hight fees</li><li>Lack of accessibility</li></ul>'
+        },
+        {
+            img: 'onchain',
+            text: '<h4>Onchain</h4><ul><li>Hucking and Security</li><li>No investment solutios</li></ul>'
+        }
+    ]
+} %}
+
+<!-- begin section -->
+<section class="section limit">
+    <div class="l">
+        <div class="limit__in">
+            <h2 class="limit__title title title_white js-reveal">{{ limitations.title | safe }}</h2>
+            <div class="limit__boxes">
+                {% for b in limitations.boxes %}
+                <div class="limit__box l-col js-reveal">
+                    {% include "components/_listbox.html" %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->

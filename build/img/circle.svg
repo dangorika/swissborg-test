@@ -1,0 +1,17 @@
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" enable-background="new 0 0 32 32">
+    <style>
+        .st0,.st1{fill:#01c38d}.st1{filter:url(#Adobe_OpacityMaskFilter)}.st2{mask:url(#mask0)}.st3{fill:#25d986}
+    </style>
+    <circle class="st0" cx="16" cy="16" r="13"/>
+    <defs>
+        <filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="3" y="2" width="26" height="13">
+            <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0"/>
+        </filter>
+    </defs>
+    <mask maskUnits="userSpaceOnUse" x="3" y="2" width="26" height="13" id="mask0">
+        <circle class="st1" cx="16" cy="15" r="13"/>
+    </mask>
+    <g class="st2">
+        <path class="st3" d="M3 2h26v13H3z"/>
+    </g>
+</svg>

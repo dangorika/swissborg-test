@@ -1,0 +1,59 @@
+{% set team = [
+    {
+        img: 'img/img1.jpg',
+        name: 'Cyrus Fazel',
+        position: 'CEO - Founder',
+        links: ['Linkedin', 'Twitter']
+    },
+    {
+        img: 'img/img2.jpg',
+        name: 'Anthony Lesoismier',
+        position: 'CSO - Co-Founder',
+        links: ['Linkedin']
+    },
+    {
+        img: 'img/img3.jpg',
+        name: 'Christophe Diserens',
+        position: 'CBDO',
+        links: ['Linkedin']
+    },
+    {
+        img: 'img/img4.jpg',
+        name: 'Marco Guerreiro',
+        position: 'Chief Research Officer',
+        links: ['Linkedin']
+    }
+] %}
+
+<!-- begin section -->
+<section class="section about" id="team">
+    <div class="l">
+        <div class="about__in">
+            <h2 class="about__title title js-reveal">About Us</h2>
+            <!-- <div class="about__list l-col-list"> -->
+                {#{% for item in team %}#}
+                <!-- <div class="l-col-list__item"> -->
+                   {#{% include "components/_player.html" %}#}
+                <!-- </div> -->
+                {#{% endfor %}#}
+            <!-- </div> -->
+            <div class="about__slider swiper-container js-team js-reveal">
+                <div class="swiper-wrapper">
+                    {% for item in team %}
+                    <div class="about__slide swiper-slide">
+                        {% include "components/_player.html" %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="about__meta js-reveal">
+                <a href="" class="about__button button button_primary" style="display: none;">see more</a>
+                <div class="about__link">
+                    <span>Want to be part of the team?</span>
+                    <a href="#" class="link link_next">Click here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->

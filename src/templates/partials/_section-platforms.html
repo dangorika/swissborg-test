@@ -1,0 +1,39 @@
+{% set platforms = [
+    {
+        platform: '<h4>CHSB Holders</h4><p>New ICO tokens with a strong focus on A.I & Data/Finance related projects Diversifitcation</p>'
+    },
+    {
+        platform: '<h4>SwissBorg</h4><p>Revenue Strem ICO tokens Revenue Plug & Play Technology Exponential ecosystem growth.</p>'
+    },
+    {
+        platform: '
+                    <h4>DAOs</h4>
+                    <ul>
+                        <li><div>Pre-ICO</div>Personalized ICO Dashboard Multi-signature wallet integration Escrow & Legal services Smart contract Community building Campaign advisory PR events & Marketing Project Management.</li>
+                        <li><div>ICO</div>ICO Dashboard payments Community Management HR services PR events & Marketing Project Management.</li>
+                        <li><div>Post-ICO</div>Treasury Management services/ Trading desk Branding advisory Digital Marketing Strategy Management information systems.</li>
+                    </ul>',
+        mod: true
+    }
+]%}
+
+<!-- begin section -->
+<section class="section platforms">
+    <div class="l">
+        <div class="platforms__in">
+            <h3 class="platforms__title title">ICO Holistic Platform</h3>
+            <div class="platforms__boxes">
+                <div class="platforms__info l-col">
+                    {% for item in platforms %}
+                    <div class="platforms__item{% if item.mod %} text text_other{% endif %}">{{ item.platform | safe }}</div>
+                    {% endfor %}
+                </div>
+
+                <div class="platforms__pic l-col">
+                    <img src="img/ico-platform.svg" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->

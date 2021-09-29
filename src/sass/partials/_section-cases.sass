@@ -1,0 +1,47 @@
+.cases
+    position: relative
+    z-index: 2
+    &__in
+        display: flex
+        align-items: center
+        padding: 26px 0 350px
+        +r($t-lg)
+            flex-direction: column
+            padding: 26px 0 300px
+        +r($m-lg)
+            padding: 26px 0 142px
+    &__title
+        margin-bottom: 24px
+        &_mob
+            display: none
+            +r($t-lg)
+                display: block
+                width: 100%
+                margin-bottom: 48px
+        &:not(.cases__title_mob)
+            +r($t-lg)
+                display: none
+    &__text
+        max-width: 469px
+        margin-bottom: 64px
+        +r($t-lg)
+            max-width: none
+        +r($m-lg)
+            margin-bottom: 30px
+    &__info
+        +r($t-lg)
+            order: 1
+    &__img
+        +r($t-lg)
+            order: 0
+            margin-bottom: 48px
+        +r($m-lg)
+            margin-bottom: 40px
+        svg
+            width: 100%
+            +r($m-lg)
+                height: 187px
+    .mountains
+        height: 358px
+        bottom: -6px
+        top: auto

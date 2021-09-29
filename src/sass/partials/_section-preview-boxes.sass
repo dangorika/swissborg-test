@@ -1,0 +1,18 @@
+.p-boxes
+    padding: 80px 0 0
+    &__items
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+    &__item
+        width: percentage(520/1200)
+        padding-bottom: 62px
+        margin-bottom: 62px
+        border-bottom: 1px solid $light
+        +r($t-lg)
+            width: 100%
+        +r($m-lg)
+            padding-bottom: 52px
+            margin-bottom: 58px
+        &:nth-last-child(-n+2)
+            border: none

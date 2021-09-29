@@ -1,0 +1,46 @@
+{% set releases = [
+    {
+        date: 'Jul 27, 2018',
+        title: 'Aenean vel urna dapibus, tristique neque eget, vehicula.'
+    },
+    {
+        date: 'Jul 27, 2018',
+        title: 'Aenean vel urna dapibus, tristique neque eget, vehicula.'
+    },
+    {
+        date: 'Jul 27, 2018',
+        title: 'Aenean vel urna dapibus, tristique neque eget, vehicula.'
+    },
+    {
+        date: 'Jul 27, 2018',
+        title: 'Aenean vel urna dapibus, tristique neque eget, vehicula.'
+    },
+    {
+        date: 'Jul 27, 2018',
+        title: 'Aenean vel urna dapibus, tristique neque eget, vehicula.'
+    },
+    {
+        date: 'Jul 27, 2018',
+        title: 'Aenean vel urna dapibus, tristique neque eget, vehicula.'
+    }
+] %}
+
+<!-- begin section -->
+<section class="section releases">
+    <div class="l">
+        <div class="releases__in">
+            <h3 class="releases__title title">Press Releases</h3>
+            <div class="releases__items">
+                {% for item in releases %}
+                <div class="releases__item">
+                   {% include "../components/_release.html" %}
+                </div>
+                {% endfor %}
+            </div>
+            <div class="releases__button">
+                <a href="#" class="button button_primary">view more</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->

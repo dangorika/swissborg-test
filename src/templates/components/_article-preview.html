@@ -1,0 +1,40 @@
+<!-- begin article-preview -->
+<div class="article-preview">
+    <div class="article-preview__col l-col{%if not col_mode%} article-preview__col_l{%endif%} js-main-article">
+        {% for item in poster %}
+        {% include "components/_article-box.html" %}
+        {% endfor %}
+    </div>
+    <div class="article-preview__col l-col{%if not col_mode%} article-preview__col_r{%endif%}">
+        <div class="article-preview__box">
+            <div class="article-preview__topbar">
+                {% if title_lg %}
+                <h2 class="article-preview__title title">{{ title }}</h2>
+                {% else %}
+                <h3 class="article-preview__title title">{{ title }}</h3>
+                {% endif %}
+                {% if link %}
+                <a href="{{ link.url }}" class="article-preview__link link link_next">{{ link.text }}</a>
+                {% endif %}
+            </div>
+            <div class="article-preview__list js-small-articles">
+                {% for item in links %}
+                {% include "components/_article-box.html" %}
+                {% endfor %}
+            </div>
+        </div>
+        {% if podcasts %}
+        <div class="article-preview__podcasts podcasts">
+            <h3 class="podcasts__title title">Latest podcasts</h3>
+            <div class="podcasts__list">
+                {% for item in podcasts %}
+                    <div class="podcasts__item">
+                        {% include "components/_podcast.html" %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+<!-- end article-preview -->
